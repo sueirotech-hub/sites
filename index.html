@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#270b3d" />
+    <meta name="description" content="Amazing burgers, good times, and a table waiting for you at FastFood." />
+    <title>FastFood — Amazing Burger</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="ambient ambient--left" aria-hidden="true"></div>
+    <div class="ambient ambient--right" aria-hidden="true"></div>
+
+    <main class="scene" id="home">
+      <div class="mountains" aria-hidden="true"></div>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__glow" aria-hidden="true"></div>
+
+        <header class="header">
+          <a class="brand" href="#home" aria-label="FastFood, home">FastFood</a>
+          <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">
+            <span></span><span></span><span></span>
+          </button>
+          <nav class="nav" id="site-nav" aria-label="Main navigation" hidden>
+            <a href="#home">Home</a>
+            <button type="button" data-dialog="menu-dialog">Our menu</button>
+            <a href="#hours">Opening hours</a>
+            <button type="button" data-dialog="booking-dialog">Book a table</button>
+          </nav>
+        </header>
+
+        <div class="hero__content">
+          <div class="hero__rule" aria-hidden="true"></div>
+          <div class="hero__copy">
+            <h1 id="hero-title">AMAZING<br />BURGER</h1>
+            <p class="hero__subheading">AT LOW PRICE</p>
+            <p class="hero__description">Get the best of your take away<br class="desktop-break" /> food with a low budget.</p>
+            <div class="hero__actions">
+              <button class="button button--primary" type="button" data-dialog="menu-dialog">View menu</button>
+              <button class="button button--secondary" type="button" data-dialog="booking-dialog">Book a table</button>
+            </div>
+          </div>
+        </div>
+
+        <img class="burger" src="assets/burger.webp" alt="Sesame seed cheeseburger with lettuce, tomato, onion, and a grilled beef patty" width="1200" height="954" fetchpriority="high" />
+
+        <footer class="hero__footer" id="hours">
+          <div class="hours" aria-label="Opening hours">
+            <div><strong>Breakfast</strong><span>9 am to 11 am</span></div>
+            <div><strong>Lunch</strong><span>12 pm to 3 pm</span></div>
+            <div><strong>Dinner</strong><span>6 pm to 11 pm</span></div>
+          </div>
+          <button class="play" type="button" data-dialog="story-dialog" aria-label="Learn about FastFood"><span aria-hidden="true"></span></button>
+        </footer>
+      </section>
+    </main>
+
+    <dialog class="dialog" id="menu-dialog" aria-labelledby="menu-title">
+      <div class="dialog__inner">
+        <button class="dialog__close" type="button" data-close aria-label="Close">×</button>
+        <p class="dialog__eyebrow">The favorite</p>
+        <h2 id="menu-title">Our menu</h2>
+        <div class="menu-feature">
+          <img src="assets/burger.webp" alt="Amazing Burger" width="1200" height="954" />
+          <div><h3>Amazing Burger</h3><p>Grilled beef, cheddar, crisp lettuce, tomato and red onion, all tucked into a sesame bun.</p><span>Big flavor. Low price.</span></div>
+        </div>
+        <button class="button button--primary" type="button" data-dialog="booking-dialog">Book a table</button>
+      </div>
+    </dialog>
+
+    <dialog class="dialog" id="booking-dialog" aria-labelledby="booking-title">
+      <form class="dialog__inner booking" id="booking-form">
+        <button class="dialog__close" type="button" data-close aria-label="Close">×</button>
+        <p class="dialog__eyebrow">Save your seat</p>
+        <h2 id="booking-title">Book a table</h2>
+        <p>Plan a visit and enjoy your burger fresh from the grill.</p>
+        <label>Your name<input type="text" name="name" autocomplete="name" required placeholder="Your name" /></label>
+        <div class="booking__row">
+          <label>Date<input type="date" name="date" required /></label>
+          <label>Guests<select name="guests"><option>1 guest</option><option selected>2 guests</option><option>3 guests</option><option>4 guests</option><option>5+ guests</option></select></label>
+        </div>
+        <button class="button button--primary" type="submit">Preview request</button>
+        <p class="booking__note" id="booking-message" role="status">This is a design preview. No reservation will be sent.</p>
+      </form>
+    </dialog>
+
+    <dialog class="dialog" id="story-dialog" aria-labelledby="story-title">
+      <div class="dialog__inner story">
+        <button class="dialog__close" type="button" data-close aria-label="Close">×</button>
+        <p class="dialog__eyebrow">FastFood</p>
+        <h2 id="story-title">Good food. Good mood.</h2>
+        <p>Come hungry, leave happy. Our Amazing Burger brings together the flavors you love at a price you'll love even more.</p>
+        <button class="button button--primary" type="button" data-dialog="menu-dialog">Explore the menu</button>
+      </div>
+    </dialog>
+  </body>
+</html>
