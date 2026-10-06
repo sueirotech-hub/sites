@@ -223,6 +223,7 @@ h1{font:400 clamp(5rem,20vw,20rem)/.93 var(--display);margin:0 auto;width:max-co
   .about{padding:80px 0}.site-footer>span{display:none}
 }
 @media(max-width:760px){
+  .scoop-wordmark{animation:none}
   .site-header,.hero-stage,.hero-controls,.section-container{width:calc(100% - 48px)}
   .site-header{min-height:94px}.desktop-nav{display:none}.brand-name{font-size:34px}.brand-name>span{font-size:.75rem;margin-top:7px}
   .brand>.icon{width:29px;height:39px}
