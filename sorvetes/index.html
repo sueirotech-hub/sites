@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#8d0b35">
   <meta name="description" content="Conheça a Sorvetes: açaís com frutas, sorvetes na casquinha e self-service. Um sabor para cada pausa.">
+  <link rel="canonical" href="https://sueirotech-hub.github.io/sites/sorvetes/">
   <title>Sorvetes | Açaí, sorvetes e self-service</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%238d0b35'/%3E%3Cpath d='M21 34h22L32 57z' fill='%23e3bd7b'/%3E%3Ccircle cx='32' cy='25' r='16' fill='%23efb9c2'/%3E%3C/svg%3E">
   <link rel="preload" href="assets/scoops.woff" as="font" type="font/woff" crossorigin>
-  <link rel="preload" href="assets/dm-sans.woff" as="font" type="font/woff" crossorigin>
   <link rel="preload" href="assets/acai-hero.webp" as="image" fetchpriority="high">
   <link rel="stylesheet" href="styles.css">
   <script src="products.js" defer></script>
@@ -31,9 +31,9 @@
     <main>
       <div class="hero-band">
         <div class="site-atmosphere" aria-hidden="true">
-          <video id="background-video" autoplay muted loop playsinline webkit-playsinline preload="metadata" poster="assets/video/strawberry-poster.webp" tabindex="-1" disablepictureinpicture disableremoteplayback>
-            <source src="assets/video/strawberry-mobile.mp4" data-src="assets/video/strawberry-mobile.mp4" media="(max-width: 700px)" type="video/mp4">
-            <source src="assets/video/strawberry-desktop.mp4" data-src="assets/video/strawberry-desktop.mp4" type="video/mp4">
+          <video id="background-video" muted loop playsinline webkit-playsinline preload="none" data-poster="assets/video/strawberry-poster.webp" tabindex="-1" disablepictureinpicture disableremoteplayback>
+            <source data-src="assets/video/strawberry-mobile.mp4" media="(max-width: 700px)" type="video/mp4">
+            <source data-src="assets/video/strawberry-desktop.mp4" type="video/mp4">
           </video>
         </div>
         <section id="inicio" class="hero" aria-label="Produtos em destaque" aria-roledescription="carrossel" tabindex="-1">
@@ -44,7 +44,7 @@
               <div class="edge-preview edge-preview-previous" aria-hidden="true"><img id="previous-image" src="assets/products/ceu-azul.webp" alt="" width="227" height="440" decoding="async" fetchpriority="low"><span class="edge-preview-label"><small>Anterior</small><strong id="previous-name">Céu azul</strong></span></div>
               <div class="edge-preview edge-preview-next" aria-hidden="true"><img id="next-image" src="assets/products/acai-na-tigela.webp" alt="" width="440" height="385" decoding="async" fetchpriority="low"><span class="edge-preview-label"><small>Próximo</small><strong id="next-name">Açaí na tigela</strong></span></div>
               <button id="previous-product" class="icon-button product-arrow previous glass" type="button" title="Ver produto anterior: Céu azul" aria-label="Ver produto anterior: Céu azul" aria-controls="hero-image"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#chevron-left"/></svg></button>
-              <figure class="hero-product"><div class="product-tilt"><div class="product-float"><img id="hero-image" class="hero-product-image is-active" src="assets/acai-hero.webp" alt="Açaí clássico com banana, morango e granola" width="800" height="1200" fetchpriority="high" decoding="async" draggable="false"><img id="hero-buffer-image" class="hero-product-image" alt="" aria-hidden="true" width="800" height="1200" decoding="async" draggable="false"></div></div><figcaption class="sr-only" id="hero-image-caption">Açaí clássico</figcaption></figure>
+              <figure class="hero-product"><div class="product-tilt"><div class="product-float"><img id="hero-image" class="hero-product-image is-active" src="assets/acai-hero.webp" alt="Açaí clássico com banana, morango e granola" width="800" height="1200" loading="eager" fetchpriority="high" decoding="async" draggable="false"><img id="hero-buffer-image" class="hero-product-image" alt="" aria-hidden="true" width="800" height="1200" decoding="async" draggable="false"></div></div><figcaption class="sr-only" id="hero-image-caption">Açaí clássico</figcaption></figure>
               <button id="next-product" class="icon-button product-arrow next glass" type="button" title="Ver próximo produto: Açaí na tigela" aria-label="Ver próximo produto: Açaí na tigela" aria-controls="hero-image"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#chevron-right"/></svg></button>
               <div class="product-position"><span class="position-line" aria-hidden="true"></span><span id="slide-count" class="slide-count" aria-hidden="true">01 / 12</span><span class="position-line" aria-hidden="true"></span></div>
             </div>
