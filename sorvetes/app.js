@@ -18,6 +18,7 @@
   const menuButton = $('.menu-toggle');
   const mobileMenu = $('#mobile-nav');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const mobileLayout = window.matchMedia('(max-width: 700px)');
   const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
   const cards = [...document.querySelectorAll('.product-card')];
   const rainFields = [...document.querySelectorAll('.rain-field')];
@@ -33,6 +34,7 @@
   let videoLoaded = false;
   let videoPending = false;
   let videoBlocked = false;
+  let mobileVideoArmed = false;
   let pointerFrame = 0;
   let productTransitions = [];
   let edgeEntrances = [];
@@ -203,7 +205,7 @@
   }
 
   function syncVideo() {
-    if (motionPaused() || document.hidden || !heroVisible || !videoReadyToLoad) {
+    if (motionPaused() || document.hidden || !heroVisible || !videoReadyToLoad || (mobileLayout.matches && !mobileVideoArmed)) {
       video.pause();
       return;
     }
@@ -371,13 +373,15 @@
     showProduct(requestedIndex + direction, true, direction);
   });
   reducedMotion.addEventListener('change', updateMotion);
+  mobileLayout.addEventListener('change', syncVideo);
   document.addEventListener('visibilitychange', updateMotion);
   window.addEventListener('pagehide', () => video.pause());
   window.addEventListener('pageshow', updateMotion);
 
   // Retry blocked inline playback on the first real tap, without autoplaying audio.
   const retryVideo = () => {
-    if (videoBlocked && !motionPaused()) syncVideo();
+    if (mobileLayout.matches) mobileVideoArmed = true;
+    if (!motionPaused() && (videoBlocked || mobileVideoArmed)) syncVideo();
   };
   document.addEventListener('pointerdown', retryVideo, { passive: true });
   document.addEventListener('keydown', retryVideo);
@@ -481,8 +485,9 @@
     };
     afterIdle(() => {
       videoReadyToLoad = true;
+      if (mobileLayout.matches && video.dataset.poster) video.poster = video.dataset.poster;
       syncVideo();
-      afterIdle(() => primeNearby(currentIndex));
+      if (!mobileLayout.matches) afterIdle(() => primeNearby(currentIndex));
     });
   }, { once: true });
   $('#year').textContent = new Date().getFullYear();
