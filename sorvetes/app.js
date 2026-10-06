@@ -203,7 +203,7 @@
   }
 
   function syncVideo() {
-    if (motionPaused() || document.hidden || !videoReadyToLoad) {
+    if (motionPaused() || document.hidden || !heroVisible || !videoReadyToLoad) {
       video.pause();
       return;
     }
@@ -214,6 +214,7 @@
       video.muted = true;
       video.defaultMuted = true;
       video.playsInline = true;
+      if (video.dataset.poster) video.poster = video.dataset.poster;
       const sourceUrl = source.dataset.src || source.getAttribute?.('src');
       if (!video.currentSrc && !video.src && sourceUrl) video.src = sourceUrl;
       video.load();
@@ -224,7 +225,7 @@
     const attempt = video.play();
     Promise.resolve(attempt).then(() => {
       videoBlocked = false;
-      if (motionPaused() || document.hidden) video.pause();
+      if (motionPaused() || document.hidden || !heroVisible) video.pause();
     }).catch(() => {
       // Safari's energy-saving mode may need a direct user gesture.
       videoBlocked = true;
@@ -435,6 +436,7 @@
       heroVisible = entries[0].isIntersecting;
       document.documentElement.classList.toggle('hero-offscreen', !heroVisible);
       syncAutoplay();
+      syncVideo();
     }, { threshold: .12 });
     heroObserver.observe(hero);
     if (!reducedMotion.matches) {
@@ -471,17 +473,19 @@
     showcase.addEventListener('pointerleave', resetTilt);
   }
 
-  function scheduleVideo() {
-    videoReadyToLoad = true;
-    syncVideo();
-  }
-  if (heroImage.complete) scheduleVideo();
-  else {
-    heroImage.addEventListener('load', scheduleVideo, { once: true });
-    heroImage.addEventListener('error', scheduleVideo, { once: true });
-  }
+  // Keep the opening image and type ahead of the decorative video and carousel cache.
+  window.addEventListener('load', () => {
+    const afterIdle = callback => {
+      if ('requestIdleCallback' in window) window.requestIdleCallback(callback, { timeout: 2500 });
+      else window.setTimeout(callback, 600);
+    };
+    afterIdle(() => {
+      videoReadyToLoad = true;
+      syncVideo();
+      afterIdle(() => primeNearby(currentIndex));
+    });
+  }, { once: true });
   $('#year').textContent = new Date().getFullYear();
   renderProduct(products[0], false);
-  primeNearby(0);
   updateMotion();
 })();
