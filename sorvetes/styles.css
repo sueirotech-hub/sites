@@ -186,6 +186,7 @@ h1{font:400 clamp(5rem,20vw,20rem)/.93 var(--display);margin:0 auto;width:max-co
 @keyframes product-float{0%,100%{transform:translateY(0) rotate(-.7deg)}50%{transform:translateY(-12px) rotate(.7deg)}}
 @keyframes berry-drift{0%,100%{transform:translateY(0) rotate(var(--berry-angle))}50%{transform:translateY(-9px) rotate(calc(var(--berry-angle) + 5deg))}}
 @keyframes wordmark-shimmer{0%,100%{background-position:0 0}50%{background-position:100% 0}}
+@media(min-width:761px){.scoop-wordmark{animation:none}}
 @media(hover:hover) and (pointer:fine){
   .product-preview:hover .catalog-art{transform:translateY(-7px) rotate(1.5deg) scale(1.025)}
   .product-showcase:has(.product-arrow.previous:hover) .edge-preview-previous,.product-showcase:has(.product-arrow.previous:focus-visible) .edge-preview-previous{opacity:.72;transform:translateX(8px) rotate(-7deg)}
