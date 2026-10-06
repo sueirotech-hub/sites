@@ -34,7 +34,7 @@
   let videoLoaded = false;
   let videoPending = false;
   let videoBlocked = false;
-  let mobileVideoArmed = false;
+  let videoArmed = false;
   let pointerFrame = 0;
   let productTransitions = [];
   let edgeEntrances = [];
@@ -205,7 +205,7 @@
   }
 
   function syncVideo() {
-    if (motionPaused() || document.hidden || !heroVisible || !videoReadyToLoad || (mobileLayout.matches && !mobileVideoArmed)) {
+    if (motionPaused() || document.hidden || !heroVisible || !videoReadyToLoad || !videoArmed) {
       video.pause();
       return;
     }
@@ -378,10 +378,10 @@
   window.addEventListener('pagehide', () => video.pause());
   window.addEventListener('pageshow', updateMotion);
 
-  // Retry blocked inline playback on the first real tap, without autoplaying audio.
+  // Start the decorative video only after a real interaction, and retry blocked playback.
   const retryVideo = () => {
-    if (mobileLayout.matches) mobileVideoArmed = true;
-    if (!motionPaused() && (videoBlocked || mobileVideoArmed)) syncVideo();
+    videoArmed = true;
+    if (!motionPaused()) syncVideo();
   };
   document.addEventListener('pointerdown', retryVideo, { passive: true });
   document.addEventListener('keydown', retryVideo);
@@ -485,7 +485,7 @@
     };
     afterIdle(() => {
       videoReadyToLoad = true;
-      if (mobileLayout.matches && video.dataset.poster) video.poster = video.dataset.poster;
+      if (video.dataset.poster) video.poster = video.dataset.poster;
       syncVideo();
     });
   }, { once: true });
