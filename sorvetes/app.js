@@ -487,7 +487,6 @@
       videoReadyToLoad = true;
       if (mobileLayout.matches && video.dataset.poster) video.poster = video.dataset.poster;
       syncVideo();
-      if (!mobileLayout.matches) afterIdle(() => primeNearby(currentIndex));
     });
   }, { once: true });
   $('#year').textContent = new Date().getFullYear();
