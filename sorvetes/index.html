@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#8d0b35">
+  <meta name="description" content="Conheça a Sorvetes: açaís com frutas, sorvetes na casquinha e self-service. Um sabor para cada pausa.">
+  <title>Sorvetes | Açaí, sorvetes e self-service</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%238d0b35'/%3E%3Cpath d='M21 34h22L32 57z' fill='%23e3bd7b'/%3E%3Ccircle cx='32' cy='25' r='16' fill='%23efb9c2'/%3E%3C/svg%3E">
+  <link rel="preload" href="assets/scoops.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="assets/dm-sans.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="assets/acai-hero.webp" as="image" fetchpriority="high">
+  <link rel="stylesheet" href="styles.css">
+  <script src="products.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#inicio">Pular para o conteúdo</a>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="#inicio" aria-label="Sorvetes, início"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#ice-cream-cone"/></svg><span class="brand-name">Sorvetes<span>açaí, sorvetes & boas pausas</span></span></a>
+      <div class="header-content">
+        <div class="header-top"><span>SABORES PARA FICAR NA MEMÓRIA</span><span class="header-note">Todo dia merece uma pausa gostosa.</span></div>
+        <div class="header-bottom">
+          <nav class="desktop-nav glass" aria-label="Navegação principal"><a class="nav-link" href="#cardapio" data-filter-link="acai">Açaís</a><a class="nav-link" href="#cardapio" data-filter-link="sorvete">Sorvetes</a><a class="nav-link" href="#self-service">Self-service</a><a class="nav-link" href="#sobre">A Sorvetes</a></nav>
+          <button class="menu-toggle icon-button glass" type="button" title="Abrir menu" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-nav"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#menu"/></svg></button>
+        </div>
+      </div>
+      <nav id="mobile-nav" class="mobile-nav glass" aria-label="Navegação móvel" hidden><a href="#cardapio" data-filter-link="acai">Açaís</a><a href="#cardapio" data-filter-link="sorvete">Sorvetes</a><a href="#self-service">Self-service</a><a href="#sobre">A Sorvetes</a></nav>
+    </header>
+    <main>
+      <div class="hero-band">
+        <div class="site-atmosphere" aria-hidden="true">
+          <video id="background-video" autoplay muted loop playsinline webkit-playsinline preload="metadata" poster="assets/video/strawberry-poster.webp" tabindex="-1" disablepictureinpicture disableremoteplayback>
+            <source src="assets/video/strawberry-mobile.mp4" data-src="assets/video/strawberry-mobile.mp4" media="(max-width: 700px)" type="video/mp4">
+            <source src="assets/video/strawberry-desktop.mp4" data-src="assets/video/strawberry-desktop.mp4" type="video/mp4">
+          </video>
+        </div>
+        <section id="inicio" class="hero" aria-label="Produtos em destaque" aria-roledescription="carrossel" tabindex="-1">
+          <div class="hero-heading"><p class="eyebrow">Sua pausa mais gostosa</p><h1 class="scoop-wordmark" data-text="SORVETES">SORVETES</h1></div>
+          <div class="hero-stage">
+            <div class="hero-copy hero-copy-left"><span class="section-label" id="hero-category">Açaí no copo</span><h2 id="hero-name">Açaí clássico</h2><p id="hero-description">Açaí cremoso, banana, morango e granola. A combinação que transforma qualquer pausa.</p><div class="hero-caption"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#heart"/></svg><span>Um sabor para chamar de seu.</span></div></div>
+            <div class="product-showcase">
+              <div class="edge-preview edge-preview-previous" aria-hidden="true"><img id="previous-image" src="assets/products/ceu-azul.webp" alt="" width="227" height="440" decoding="async" fetchpriority="low"><span class="edge-preview-label"><small>Anterior</small><strong id="previous-name">Céu azul</strong></span></div>
+              <div class="edge-preview edge-preview-next" aria-hidden="true"><img id="next-image" src="assets/products/acai-na-tigela.webp" alt="" width="440" height="385" decoding="async" fetchpriority="low"><span class="edge-preview-label"><small>Próximo</small><strong id="next-name">Açaí na tigela</strong></span></div>
+              <button id="previous-product" class="icon-button product-arrow previous glass" type="button" title="Ver produto anterior: Céu azul" aria-label="Ver produto anterior: Céu azul" aria-controls="hero-image"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#chevron-left"/></svg></button>
+              <figure class="hero-product"><div class="product-tilt"><div class="product-float"><img id="hero-image" class="hero-product-image is-active" src="assets/acai-hero.webp" alt="Açaí clássico com banana, morango e granola" width="800" height="1200" fetchpriority="high" decoding="async" draggable="false"><img id="hero-buffer-image" class="hero-product-image" alt="" aria-hidden="true" width="800" height="1200" decoding="async" draggable="false"></div></div><figcaption class="sr-only" id="hero-image-caption">Açaí clássico</figcaption></figure>
+              <button id="next-product" class="icon-button product-arrow next glass" type="button" title="Ver próximo produto: Açaí na tigela" aria-label="Ver próximo produto: Açaí na tigela" aria-controls="hero-image"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#chevron-right"/></svg></button>
+              <div class="product-position"><span class="position-line" aria-hidden="true"></span><span id="slide-count" class="slide-count" aria-hidden="true">01 / 12</span><span class="position-line" aria-hidden="true"></span></div>
+            </div>
+            <div class="hero-copy hero-copy-right"><p class="hero-intro">Açaí, sorvete ou os dois?</p><p id="hero-detail">Fruta, crocância e cremosidade em cada colherada. Aproveite o seu açaí do jeito que mais gosta.</p><div class="hero-actions"><a class="button button-lime" href="#cardapio"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#ice-cream-bowl"/></svg>Conheça os sabores</a><a class="text-link" href="#self-service">Descubra o self-service</a></div></div>
+          </div>
+          <div class="hero-controls"><span class="hero-control-note">Açaís. Casquinhas. Suas combinações.</span></div>
+          <p id="slide-status" class="sr-only" aria-live="polite"></p>
+        </section>
+        <div class="berries" aria-hidden="true"><img class="berry berry-one" src="assets/raspberry.webp" alt="" width="160" height="160" decoding="async"><img class="berry berry-two" src="assets/raspberry.webp" alt="" width="160" height="160" decoding="async"></div>
+        <div class="cream-edge" aria-hidden="true"><svg viewBox="0 0 1440 310" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 76 C8 76 10 87 10 99 L10 151 C10 168 26 168 26 151 L26 54 C26 31 52 31 52 55 L52 74 C52 94 71 94 71 75 L71 39 C71 14 99 14 99 39 L99 177 C99 198 115 198 115 177 L115 95 C115 67 142 67 142 94 L142 224 C142 247 161 247 161 224 L161 77 C161 55 182 55 182 76 L182 49 C182 22 211 22 211 50 L211 117 C211 138 230 138 230 117 L230 79 C230 61 250 61 250 80 L250 163 C250 185 269 185 269 163 L269 46 C269 16 300 16 300 47 L300 214 C300 238 319 238 319 214 L319 101 C319 82 339 82 339 101 L339 66 C339 40 370 40 370 67 L370 96 C370 116 388 116 388 96 L388 42 C388 16 416 16 416 43 L416 177 C416 198 434 198 434 177 L434 104 C434 83 456 83 456 103 L456 67 C456 43 482 43 482 68 L482 221 C482 245 501 245 501 221 L501 70 C501 49 522 49 522 70 L522 25 C522 2 548 2 548 26 L548 118 C548 139 567 139 567 118 L567 54 C567 30 595 30 595 56 L595 163 C595 184 613 184 613 162 L613 69 C613 47 636 47 636 70 L636 96 C636 116 654 116 654 96 L654 48 C654 21 684 21 684 49 L684 218 C684 242 703 242 703 218 L703 49 C703 23 731 23 731 50 L731 91 C731 112 749 112 749 91 L749 24 C749 0 777 0 777 26 L777 155 C777 177 796 177 796 155 L796 70 C796 47 821 47 821 70 L821 102 C821 124 840 124 840 102 L840 53 C840 28 868 28 868 54 L868 210 C868 234 888 234 888 210 L888 82 C888 59 911 59 911 82 L911 47 C911 21 940 21 940 48 L940 132 C940 153 958 153 958 132 L958 86 C958 65 979 65 979 86 L979 198 C979 221 998 221 998 198 L998 56 C998 32 1024 32 1024 58 L1024 83 C1024 104 1043 104 1043 83 L1043 36 C1043 9 1073 9 1073 38 L1073 180 C1073 203 1092 203 1092 180 L1092 76 C1092 54 1115 54 1115 76 L1115 113 C1115 135 1134 135 1134 113 L1134 54 C1134 29 1162 29 1162 54 L1162 209 C1162 233 1182 233 1182 209 L1182 93 C1182 72 1204 72 1204 93 L1204 68 C1204 42 1232 42 1232 68 L1232 112 C1232 135 1251 135 1251 112 L1251 47 C1251 20 1280 20 1280 49 L1280 233 C1280 255 1299 255 1299 233 L1299 81 C1299 56 1325 56 1325 82 L1325 147 C1325 169 1344 169 1344 147 L1344 48 C1344 24 1371 24 1371 50 L1371 194 C1371 216 1390 216 1390 194 L1390 77 C1390 53 1415 53 1415 78 L1415 109 C1415 128 1433 128 1433 109 L1433 57 L1440 44 L1440 310 L0 310 Z"/>
+      </svg></div>
+      </div>
+      <div class="catalog-band">
+        <div class="rain-field" aria-hidden="true">
+          <svg class="rain-drop" style="--x:3%;--size:32px;--delay:-2s;--duration:15s;--drift:18px;--turn:-18deg"><use href="assets/icons.svg#ice-cream-cone"/></svg>
+          <svg class="rain-drop" style="--x:12%;--size:45px;--delay:-10s;--duration:18s;--drift:-16px;--turn:14deg"><use href="assets/icons.svg#ice-cream-bowl"/></svg>
+          <svg class="rain-drop" style="--x:22%;--size:28px;--delay:-6s;--duration:13s;--drift:12px;--turn:-12deg"><use href="assets/icons.svg#ice-cream-cone"/></svg>
+          <svg class="rain-drop" style="--x:31%;--size:50px;--delay:-14s;--duration:20s;--drift:-20px;--turn:20deg"><use href="assets/icons.svg#ice-cream-bowl"/></svg>
+          <svg class="rain-drop" style="--x:42%;--size:34px;--delay:-5s;--duration:17s;--drift:19px;--turn:-20deg"><use href="assets/icons.svg#ice-cream-cone"/></svg>
+          <svg class="rain-drop" style="--x:53%;--size:43px;--delay:-12s;--duration:16s;--drift:-22px;--turn:15deg"><use href="assets/icons.svg#ice-cream-bowl"/></svg>
+          <svg class="rain-drop" style="--x:64%;--size:26px;--delay:-4s;--duration:14s;--drift:15px;--turn:-16deg"><use href="assets/icons.svg#ice-cream-cone"/></svg>
+          <svg class="rain-drop" style="--x:74%;--size:48px;--delay:-16s;--duration:19s;--drift:-13px;--turn:18deg"><use href="assets/icons.svg#ice-cream-bowl"/></svg>
+          <svg class="rain-drop" style="--x:83%;--size:30px;--delay:-8s;--duration:15s;--drift:20px;--turn:-15deg"><use href="assets/icons.svg#ice-cream-cone"/></svg>
+          <svg class="rain-drop" style="--x:93%;--size:40px;--delay:-18s;--duration:21s;--drift:-17px;--turn:21deg"><use href="assets/icons.svg#ice-cream-bowl"/></svg>
+        </div>
+        <section id="cardapio" class="catalog section-container" aria-labelledby="catalog-title">
+          <div class="section-heading reveal"><div><p class="section-label">O cardápio da sua pausa</p><h2 id="catalog-title">Qual é o seu <em>favorito?</em></h2></div><p>Do açaí com frutas à casquinha clássica. Tem sempre um sabor para descobrir.</p></div>
+          <div class="catalog-toolbar"><div class="category-filters glass" role="group" aria-label="Filtrar produtos"><button class="filter-button active" type="button" data-filter="all" aria-pressed="true">Todos</button><button class="filter-button" type="button" data-filter="acai" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#ice-cream-bowl"/></svg>Açaís</button><button class="filter-button" type="button" data-filter="sorvete" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#ice-cream-cone"/></svg>Sorvetes</button></div><span id="product-count" class="product-count" aria-live="polite">12 sabores para descobrir</span></div>
+          <div class="product-grid">
+            <article class="product-card reveal" data-product-id="acai-classico" data-category="acai">
+              <button class="product-preview" type="button" data-show-product="acai-classico" aria-label="Ver Açaí clássico em destaque">
+                <span class="catalog-art"><img src="assets/products/acai-classico-thumb.webp" alt="" width="293" height="440" loading="lazy" decoding="async"></span>
+                <span class="product-info"><span><span class="product-category">Açaí no copo</span><span class="product-name">Açaí clássico</span></span><span class="product-view" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#eye"/></svg></span></span>
+              </button>
+            </article>
+            <article class="product-card reveal" data-product-id="acai-na-tigela" data-category="acai">
+              <button class="product-preview" type="button" data-show-product="acai-na-tigela" aria-label="Ver Açaí na tigela em destaque">
+                <span class="catalog-art"><img src="assets/products/acai-na-tigela-thumb.webp" srcset="assets/products/acai-na-tigela-thumb.webp 440w, assets/products/acai-na-tigela.webp 900w" sizes="(max-width: 540px) 165px, (max-width: 960px) 230px, 270px" alt="" width="440" height="385" loading="lazy" decoding="async"></span>
+                <span class="product-info"><span><span class="product-category">Açaí na tigela</span><span class="product-name">Açaí na tigela</span></span><span class="product-view" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#eye"/></svg></span></span>
+              </button>
+            </article>
+            <article class="product-card reveal" data-product-id="acai-com-calda" data-category="acai">
+              <button class="product-preview" type="button" data-show-product="acai-com-calda" aria-label="Ver Açaí com calda em destaque">
+                <span class="catalog-art"><img src="assets/products/acai-com-calda-thumb.webp" srcset="assets/products/acai-com-calda-thumb.webp 440w, assets/products/acai-com-calda.webp 900w" sizes="(max-width: 540px) 165px, (max-width: 960px) 230px, 270px" alt="" width="440" height="385" loading="lazy" decoding="async"></span>
+                <span class="product-info"><span><span class="product-category">Açaí na tigela</span><span class="product-name">Açaí com calda</span></span><span class="product-view" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#eye"/></svg></span></span>
+              </button>
+            </article>
+            <article class="product-card reveal" data-product-id="acai-em-camadas" data-category="acai">
+              <button class="product-preview" type="button" data-show-product="acai-em-camadas" aria-label="Ver Açaí em camadas em destaque">
+                <span class="catalog-art"><img src="assets/products/acai-em-camadas-thumb.webp" srcset="assets/products/acai-em-camadas-thumb.webp 286w, assets/products/acai-em-camadas.webp 584w" sizes="(max-width: 540px) 165px, (max-width: 960px) 230px, 270px" alt="" width="286" height="440" loading="lazy" decoding="async"></span>
+                <span class="product-info"><span><span class="product-category">Açaí no copo</span><span class="product-name">Açaí em camadas</span></span><span class="product-view" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#eye"/></svg></span></span>
+              </button>
+            </article>
+            <article class="product-card reveal" data-product-id="baunilha" data-category="sorvete">
+              <button class="product-preview" type="button" data-show-product="baunilha" aria-label="Ver Baunilha em destaque">
+                <span class="catalog-art"><img src="assets/products/baunilha-thumb.webp" srcset="assets/products/baunilha-thumb.webp 214w, assets/products/baunilha.webp 438w" sizes="(max-width: 540px) 165px, (max-width: 960px) 230px, 270px" alt="" width="214" height="440" loading="lazy" decoding="async"></span>
+                <span class="product-info"><span><span class="product-category">Sorvete na casquinha</span><span class="product-name">Baunilha</span></span><span class="product-view" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#eye"/></svg></span></span>
+              </button>
+            </article>
+            <article class="product-card reveal" data-product-id="morango" data-category="sorvete">
+              <button class="product-preview" type="button" data-show-product="morango" aria-label="Ver Morango em destaque">
+                <span class="catalog-art"><img src="assets/products/morango-thumb.webp" srcset="assets/products/morango-thumb.webp 212w, assets/products/morango.webp 433w" sizes="(max-width: 540px) 165px, (max-width: 960px) 230px, 270px" alt="" width="212" height="440" loading="lazy" decoding="async"></span>
+                <span class="product-info"><span><span class="product-category">Sorvete na casquinha</span><span class="product-name">Morango</span></span><span class="product-view" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#eye"/></svg></span></span>
+              </button>
+            </article>
+            <article class="product-card reveal" data-product-id="frutas-vermelhas" data-category="sorvete">
+              <button class="product-preview" type="button" data-show-product="frutas-vermelhas" aria-label="Ver Frutas vermelhas em destaque">
+                <span class="catalog-art"><img src="assets/products/frutas-vermelhas-thumb.webp" srcset="assets/products/frutas-vermelhas-thumb.webp 227w, assets/products/frutas-vermelhas.webp 465w" sizes="(max-width: 540px) 165px, (max-width: 960px) 230px, 270px" alt="" width="227" height="440" loading="lazy" decoding="async"></span>
+                <span class="product-info"><span><span class="product-category">Sorvete na casquinha</span><span class="product-name">Frutas vermelhas</span></span><span class="product-view" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#eye"/></svg></span></span>
+              </button>
+            </article>
+            <article class="product-card reveal" data-product-id="maracuja" data-category="sorvete">
+              <button class="product-preview" type="button" data-show-product="maracuja" aria-label="Ver Maracujá em destaque">
+                <span class="catalog-art"><img src="assets/products/maracuja-thumb.webp" srcset="assets/products/maracuja-thumb.webp 213w, assets/products/maracuja.webp 436w" sizes="(max-width: 540px) 165px, (max-width: 960px) 230px, 270px" alt="" width="213" height="440" loading="lazy" decoding="async"></span>
+                <span class="product-info"><span><span class="product-category">Sorvete na casquinha</span><span class="product-name">Maracujá</span></span><span class="product-view" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#eye"/></svg></span></span>
+              </button>
+            </article>
+            <article class="product-card reveal" data-product-id="pistache" data-category="sorvete">
+              <button class="product-preview" type="button" data-show-product="pistache" aria-label="Ver Pistache em destaque">
+                <span class="catalog-art"><img src="assets/products/pistache-thumb.webp" srcset="assets/products/pistache-thumb.webp 214w, assets/products/pistache.webp 438w" sizes="(max-width: 540px) 165px, (max-width: 960px) 230px, 270px" alt="" width="214" height="440" loading="lazy" decoding="async"></span>
+                <span class="product-info"><span><span class="product-category">Sorvete na casquinha</span><span class="product-name">Pistache</span></span><span class="product-view" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#eye"/></svg></span></span>
+              </button>
+            </article>
+            <article class="product-card reveal" data-product-id="chocolate" data-category="sorvete">
+              <button class="product-preview" type="button" data-show-product="chocolate" aria-label="Ver Chocolate em destaque">
+                <span class="catalog-art"><img src="assets/products/chocolate-thumb.webp" srcset="assets/products/chocolate-thumb.webp 228w, assets/products/chocolate.webp 465w" sizes="(max-width: 540px) 165px, (max-width: 960px) 230px, 270px" alt="" width="228" height="440" loading="lazy" decoding="async"></span>
+                <span class="product-info"><span><span class="product-category">Sorvete na casquinha</span><span class="product-name">Chocolate</span></span><span class="product-view" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#eye"/></svg></span></span>
+              </button>
+            </article>
+            <article class="product-card reveal" data-product-id="uva" data-category="sorvete">
+              <button class="product-preview" type="button" data-show-product="uva" aria-label="Ver Uva em destaque">
+                <span class="catalog-art"><img src="assets/products/uva-thumb.webp" srcset="assets/products/uva-thumb.webp 219w, assets/products/uva.webp 448w" sizes="(max-width: 540px) 165px, (max-width: 960px) 230px, 270px" alt="" width="219" height="440" loading="lazy" decoding="async"></span>
+                <span class="product-info"><span><span class="product-category">Sorvete na casquinha</span><span class="product-name">Uva</span></span><span class="product-view" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#eye"/></svg></span></span>
+              </button>
+            </article>
+            <article class="product-card reveal" data-product-id="ceu-azul" data-category="sorvete">
+              <button class="product-preview" type="button" data-show-product="ceu-azul" aria-label="Ver Céu azul em destaque">
+                <span class="catalog-art"><img src="assets/products/ceu-azul-thumb.webp" srcset="assets/products/ceu-azul-thumb.webp 224w, assets/products/ceu-azul.webp 459w" sizes="(max-width: 540px) 165px, (max-width: 960px) 230px, 270px" alt="" width="224" height="440" loading="lazy" decoding="async"></span>
+                <span class="product-info"><span><span class="product-category">Sorvete na casquinha</span><span class="product-name">Céu azul</span></span><span class="product-view" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#eye"/></svg></span></span>
+              </button>
+            </article>
+          </div>
+        </section>
+      </div>
+      <section id="self-service" class="self-service" aria-labelledby="self-title">
+        <div class="rain-field" aria-hidden="true">
+          <svg class="rain-drop" style="--x:3%;--size:32px;--delay:-2s;--duration:15s;--drift:18px;--turn:-18deg"><use href="assets/icons.svg#ice-cream-cone"/></svg>
+          <svg class="rain-drop" style="--x:12%;--size:45px;--delay:-10s;--duration:18s;--drift:-16px;--turn:14deg"><use href="assets/icons.svg#ice-cream-bowl"/></svg>
+          <svg class="rain-drop" style="--x:22%;--size:28px;--delay:-6s;--duration:13s;--drift:12px;--turn:-12deg"><use href="assets/icons.svg#ice-cream-cone"/></svg>
+          <svg class="rain-drop" style="--x:31%;--size:50px;--delay:-14s;--duration:20s;--drift:-20px;--turn:20deg"><use href="assets/icons.svg#ice-cream-bowl"/></svg>
+          <svg class="rain-drop" style="--x:42%;--size:34px;--delay:-5s;--duration:17s;--drift:19px;--turn:-20deg"><use href="assets/icons.svg#ice-cream-cone"/></svg>
+          <svg class="rain-drop" style="--x:53%;--size:43px;--delay:-12s;--duration:16s;--drift:-22px;--turn:15deg"><use href="assets/icons.svg#ice-cream-bowl"/></svg>
+          <svg class="rain-drop" style="--x:64%;--size:26px;--delay:-4s;--duration:14s;--drift:15px;--turn:-16deg"><use href="assets/icons.svg#ice-cream-cone"/></svg>
+          <svg class="rain-drop" style="--x:74%;--size:48px;--delay:-16s;--duration:19s;--drift:-13px;--turn:18deg"><use href="assets/icons.svg#ice-cream-bowl"/></svg>
+          <svg class="rain-drop" style="--x:83%;--size:30px;--delay:-8s;--duration:15s;--drift:20px;--turn:-15deg"><use href="assets/icons.svg#ice-cream-cone"/></svg>
+          <svg class="rain-drop" style="--x:93%;--size:40px;--delay:-18s;--duration:21s;--drift:-17px;--turn:21deg"><use href="assets/icons.svg#ice-cream-bowl"/></svg>
+        </div>
+        <div class="section-container self-layout">
+          <div class="self-copy reveal"><p class="section-label">Self-service Sorvetes</p><h2 id="self-title">A melhor combinação?<br><em>A sua.</em></h2><p>Misture seus sabores favoritos, descubra os complementos e encontre uma combinação diferente a cada visita.</p><a class="text-link" href="#cardapio">Conheça nossos sabores</a></div>
+          <div class="self-art reveal"><img class="self-bowl" src="assets/products/acai-na-tigela.webp" alt="Tigela de açaí com frutas e granola" width="900" height="788" loading="lazy" decoding="async"><img class="self-cone" src="assets/products/morango.webp" alt="Sorvete de morango na casquinha" width="433" height="900" loading="lazy" decoding="async"></div>
+          <div class="self-steps"><div class="self-step reveal"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#ice-cream-bowl"/></svg><div><h3>Seus sabores</h3><p>Açaí, sorvete ou uma mistura dos dois.</p></div></div><div class="self-step reveal"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#cookie"/></svg><div><h3>Seu toque</h3><p>Frutas, granola, caldas e mais crocância.</p></div></div><div class="self-step reveal"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#heart"/></svg><div><h3>Seu momento</h3><p>Uma pausa gostosa, sem pressa.</p></div></div></div>
+        </div>
+      </section>
+      <div class="about-band">
+        <div class="rain-field" aria-hidden="true">
+          <svg class="rain-drop" style="--x:3%;--size:32px;--delay:-2s;--duration:15s;--drift:18px;--turn:-18deg"><use href="assets/icons.svg#ice-cream-cone"/></svg>
+          <svg class="rain-drop" style="--x:12%;--size:45px;--delay:-10s;--duration:18s;--drift:-16px;--turn:14deg"><use href="assets/icons.svg#ice-cream-bowl"/></svg>
+          <svg class="rain-drop" style="--x:22%;--size:28px;--delay:-6s;--duration:13s;--drift:12px;--turn:-12deg"><use href="assets/icons.svg#ice-cream-cone"/></svg>
+          <svg class="rain-drop" style="--x:31%;--size:50px;--delay:-14s;--duration:20s;--drift:-20px;--turn:20deg"><use href="assets/icons.svg#ice-cream-bowl"/></svg>
+          <svg class="rain-drop" style="--x:42%;--size:34px;--delay:-5s;--duration:17s;--drift:19px;--turn:-20deg"><use href="assets/icons.svg#ice-cream-cone"/></svg>
+          <svg class="rain-drop" style="--x:53%;--size:43px;--delay:-12s;--duration:16s;--drift:-22px;--turn:15deg"><use href="assets/icons.svg#ice-cream-bowl"/></svg>
+          <svg class="rain-drop" style="--x:64%;--size:26px;--delay:-4s;--duration:14s;--drift:15px;--turn:-16deg"><use href="assets/icons.svg#ice-cream-cone"/></svg>
+          <svg class="rain-drop" style="--x:74%;--size:48px;--delay:-16s;--duration:19s;--drift:-13px;--turn:18deg"><use href="assets/icons.svg#ice-cream-bowl"/></svg>
+          <svg class="rain-drop" style="--x:83%;--size:30px;--delay:-8s;--duration:15s;--drift:20px;--turn:-15deg"><use href="assets/icons.svg#ice-cream-cone"/></svg>
+          <svg class="rain-drop" style="--x:93%;--size:40px;--delay:-18s;--duration:21s;--drift:-17px;--turn:21deg"><use href="assets/icons.svg#ice-cream-bowl"/></svg>
+        </div>
+        <section id="sobre" class="about section-container reveal" aria-labelledby="about-title"><div class="about-mark"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#ice-cream-cone"/></svg></div><p class="section-label">A Sorvetes</p><h2 id="about-title">As melhores pausas<br>têm <em>gosto de sorvete.</em></h2><p>A casquinha que lembra a infância. O açaí depois de um dia cheio. A mistura que só você faz. A gente gosta de fazer parte desses pequenos momentos.</p><a class="text-link" href="#cardapio">Encontre seu próximo favorito</a></section>
+      </div>
+    </main>
+    <footer class="site-footer"><a class="footer-brand" href="#inicio">Sorvetes</a><span>Açaí, sorvetes e boas pausas.</span><nav aria-label="Navegação do rodapé"><a href="#cardapio">Sabores</a><a href="#self-service">Self-service</a><span>© <span id="year">2026</span></span></nav></footer>
+  </div>
+</body>
+</html>
