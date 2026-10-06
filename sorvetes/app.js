@@ -23,8 +23,6 @@
   const cards = [...document.querySelectorAll('.product-card')];
   const rainFields = [...document.querySelectorAll('.rain-field')];
   const saveData = Boolean(navigator.connection?.saveData);
-  // Make the mobile backdrop available during initial rendering, before idle time.
-  if (mobileLayout.matches && video.dataset.poster) video.poster = video.dataset.poster;
   let currentIndex = 0;
   let requestedIndex = 0;
   let mousePaused = false;
@@ -487,7 +485,7 @@
     };
     afterIdle(() => {
       videoReadyToLoad = true;
-      if (!mobileLayout.matches && video.dataset.poster) video.poster = video.dataset.poster;
+      if (video.dataset.poster) video.poster = video.dataset.poster;
       syncVideo();
     });
   }, { once: true });
