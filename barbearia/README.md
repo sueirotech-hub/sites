@@ -1,0 +1,40 @@
+# Barbearia Premium
+
+Landing page responsiva, feita com HTML, CSS e JavaScript puro. Todo o conteúdo é em português, com máquina em levitação suave, tipografia de texto mais robusta, descrições diretas e galeria de inspirações no lugar do blog. Não precisa de npm, compilação ou dependências de frontend.
+
+## Arquivos
+
+- `index.html`: conteúdo, navegação, serviços, horários, contato e rodapé.
+- `styles.css`: layout desktop/mobile, cores e tipografia.
+- `script.js`: menu acessível, navegação ativa, busca e janelas de equipe e inspirações de estilo.
+- `motion.js`: fade-in, entradas em cascata, palavras reveladas, inclinação suave e abertura dos diálogos a partir do elemento clicado.
+- `fonts.css`: fontes locais, com fallback e `font-display: swap`.
+- `assets/`: fotografias em WebP, máquina com transparência, fontes e favicon.
+
+Abra `index.html` diretamente ou publique o conteúdo de `` em qualquer hospedagem estática. Para um servidor local opcional: `python3 -m http.server 8000 --directory barbearia`.
+
+## Personalizar
+
+Edite as variáveis no começo de `styles.css` para cores e largura. Altere nome, telefone, endereço, horários e links no HTML. Os textos da equipe e da galeria estão em `script.js`.
+
+Todos os nomes, contatos e dados de estabelecimento são fictícios para demonstração. Os ícones sociais apontam às páginas iniciais das redes e devem ser substituídos pelos perfis reais. O botão principal leva ao contato; o telefone e o e-mail usam `tel:` e `mailto:`.
+
+A newsletter apenas valida o formato do e-mail e informa que a inscrição está indisponível. Não transmite nem armazena dados. Integre um provedor antes de ativá-la em produção.
+
+## Imagens e tipografia
+
+Fotografias e máquina criadas pela ferramenta de geração de imagens a partir da referência fornecida, para reproduzir a composição, iluminação quente e identidade escura. Os arquivos locais de Alfa Slab One, Bitter e Yellowtail foram obtidos pelo Google Fonts. As licenças correspondentes estão em `assets/fonts/`.
+
+## Acessibilidade e desempenho
+
+Sem scripts ou fontes externos em tempo de execução. Imagens WebP com dimensões explícitas; máquina com prioridade de carregamento; fotos das seções seguintes com carregamento sob demanda. Links de salto, foco visível, menu com `aria-expanded`, formulários rotulados, janelas nativas com fechamento por Escape e suporte a redução de movimento.
+
+Validação: sintaxe JavaScript e integridade dos arquivos/imagens/âncoras. A inspeção visual em navegador não estava disponível neste ambiente; não foi realizada medição de Lighthouse.
+
+## Movimento e nova direção visual
+
+Paleta de tinta preta, verde profundo, vinho, tabaco, latão e papel quente. Títulos com Alfa Slab One, textos encorpados com Bitter e assinaturas com Yellowtail. As fontes anteriores foram removidas. Os pesos, tamanhos e regras de quebra de linha estão centralizados em `styles.css`.
+
+Animações implementadas em código próprio a partir dos padrões apresentados nos catálogos https://naocodei.com/free-code-css/ e https://naocodei.com/free-code/: fade-in, subir e aparecer, cascata, cortina, sublinhado, flutuação, brilho no botão, revelação por palavras, inclinação e janela que nasce do elemento acionado.
+
+O conteúdo continua visível sem JavaScript. Preferência por movimento reduzido desativa entradas, inclinação, levitação e transições; alterações dessa preferência durante a navegação também são respeitadas. A rolagem permanece nativa, e as entradas acontecem apenas uma vez. Elementos focados pelo teclado são revelados imediatamente. A levitação pausa quando o hero sai da tela.

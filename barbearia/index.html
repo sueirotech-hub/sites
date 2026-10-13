@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c0c0b">
+  <meta name="description" content="Corte, barba e cuidado masculino em uma barbearia premium em São Paulo. Seu estilo, sua melhor versão.">
+  <title>Barbearia Premium — Seu estilo, sua melhor versão</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/clipper.webp" as="image" fetchpriority="high">
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <script src="motion.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+<!-- Ícones vetoriais locais, sem biblioteca externa. -->
+<svg class="svg-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+ <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M3 12h17m-6-6 6 6-6 6"/></symbol>
+ <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="7"/><path d="m16 16 5 5"/></symbol>
+ <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 5h18M3 10h18M3 15h18M3 20h18"/></symbol>
+ <symbol id="i-phone" viewBox="0 0 24 24"><path d="m7 3 4 4-3 3c1 3 3 5 6 6l3-3 4 4-2 4c-8 1-17-8-16-16zM15 3c3 0 6 3 6 6m-6-2c1 0 2 1 2 2"/></symbol>
+ <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="m3 5 9 8 9-8"/></symbol>
+ <symbol id="i-pin" viewBox="0 0 24 24"><path d="M19 9c0 5-7 12-7 12S5 14 5 9a7 7 0 1 1 14 0Z"/><circle cx="12" cy="9" r="2"/></symbol>
+ <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6"/></symbol>
+ <symbol id="i-youtube" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3z"/></symbol>
+ <symbol id="i-twitter" viewBox="0 0 24 24"><path d="M21 5c-1 .6-2 1-3 1-3-4-8-1-7 3-4 0-7-2-9-4-1 4 1 7 4 8-1 0-2 0-3-.4 1 3 3 4 5 4-2 2-5 3-7 3 13 5 20-6 19-13z" fill="currentColor" stroke="none"/></symbol>
+ <symbol id="i-scissors" viewBox="0 0 48 48"><circle cx="10" cy="36" r="6"/><circle cx="34" cy="36" r="6"/><path d="m13 31 21-27-7 23M31 31 10 4l7 23"/></symbol>
+ <symbol id="i-beard" viewBox="0 0 48 48"><path d="M10 9c5 3 8 0 14 0s9 3 14 0v15c0 11-14 18-14 18S10 35 10 24zm5 13c4-5 6-3 9 0 3-3 5-5 9 0M17 29l7 5 7-5"/></symbol>
+ <symbol id="i-razor" viewBox="0 0 48 48"><path d="m29 4 13 10-5 6L24 10zm-2 9L9 33l5 5 20-20M9 33l-4 7 8 3 24-26"/></symbol>
+ <symbol id="i-diamond" viewBox="0 0 48 48"><path d="m4 16 8-11h24l8 11-20 27zm0 0h40M12 5l5 11 7 27 7-27 5-11M17 16l7-11 7 11"/></symbol>
+ <symbol id="i-leaf" viewBox="0 0 48 48"><path d="M9 37C1 19 20 7 40 5c-1 21-7 37-27 32M7 44c4-13 13-21 25-29M13 31l2-10m5 4 10-1"/></symbol>
+ <symbol id="i-chair" viewBox="0 0 48 48"><path d="M16 5h15v20H16zM10 17v16h26V21h-5M10 17H6v7m30-3h6v8h-6M15 33v5h17v-5M24 38v6m-9 0h18M20 5V2h7"/></symbol>
+</svg>
+<header class="header container">
+  <a class="brand" href="#inicio" aria-label="Seu Logo — Início"><span class="brand-mark" aria-hidden="true"></span><span>SEU LOGO</span></a>
+  <nav class="desktop-nav" aria-label="Navegação principal"><a class="active" href="#inicio">Início</a><a href="#servicos">Serviços</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a></nav>
+  <div class="header-tools"><button class="icon-button" id="search-toggle" aria-label="Buscar no site"><svg><use href="#i-search"/></svg></button><button class="icon-button" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-panel"><svg><use href="#i-menu"/></svg></button></div>
+  <nav class="menu-panel" id="menu-panel" aria-label="Menu" hidden><a href="#inicio">Início</a><a href="#servicos">Serviços</a><a href="#sobre">Sobre</a><a href="#estilos">Estilos</a><a href="#contato">Contato e agendamento</a></nav>
+ </header>
+ <main id="conteudo">
+<div class="opening">
+  <section class="hero" id="inicio" aria-labelledby="hero-title">
+   <div class="hero-stage container"><h1 id="hero-title">BARBEARIA</h1><img class="hero-clipper" src="assets/clipper.webp" alt="Máquina profissional de corte preta e prateada" width="640" height="1000" fetchpriority="high"><p class="hero-script">Estilo e tradição</p><div class="hero-copy"><p class="hero-tagline">Corte bem feito. Barba em dia.</p><p>Corte na tesoura, degradê e barba na navalha.<br>Conta pra gente como você gosta. A gente cuida do acabamento.</p><a class="button button-gold" href="#contato">FALE COM A GENTE <svg><use href="#i-arrow"/></svg></a></div></div>
+   <div class="hero-social social" aria-label="Redes sociais"><a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X"><svg><use href="#i-twitter"/></svg></a><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg><use href="#i-instagram"/></svg></a><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg><use href="#i-youtube"/></svg></a></div>
+  </section>
+  <section class="about" id="sobre" aria-labelledby="about-title">
+   <div class="container about-layout"><div class="about-copy"><p class="eyebrow">SOBRE NÓS</p><h2 id="about-title">Seu corte,<br>sem pressa.</h2><p>Antes da máquina, uma conversa. Acertamos com você o comprimento, o desenho da barba e o acabamento. Depois, é só sentar na cadeira.</p><a class="about-phone" href="tel:+5511999999999"><svg><use href="#i-phone"/></svg>(11) 99999-9999</a><a class="button button-red" href="#equipe">SAIBA MAIS <svg><use href="#i-arrow"/></svg></a></div><img class="about-portrait" src="assets/portrait.webp" alt="Retrato em preto e branco de um homem de barba e bigode" width="1000" height="750" loading="lazy"><div class="about-signature"><p class="signature">Estilo<br><span>próprio</span></p><p class="since">DESDE<strong>2015 <span></span></strong></p><p>Tesoura e navalha.<br>Desde o começo.</p></div></div>
+  </section>
+  <section class="services" id="servicos" aria-labelledby="services-title"><div class="container"><div class="section-heading"><div><p class="eyebrow">SERVIÇOS</p><h2 id="services-title">Tesoura, navalha<br>e mão firme.</h2></div><p>Do corte ao cuidado com os fios.<br>Veja o que dá pra fazer na cadeira.</p></div>
+   <div class="services-grid">
+    <article class="service"><svg><use href="#i-scissors"/></svg><div><h3>CORTE DE CABELO</h3><p>Na tesoura ou na máquina. Acertamos o comprimento e finalizamos do jeito que você gosta.</p></div></article>
+    <article class="service"><svg><use href="#i-beard"/></svg><div><h3>BARBA</h3><p>Aparamos, desenhamos e alinhamos. Navalha no acabamento e atenção aos contornos.</p></div></article>
+    <article class="service"><svg><use href="#i-razor"/></svg><div><h3>BARBOTERAPIA</h3><p>Toalha quente, preparo da pele e navalha. Um cuidado completo para a barba.</p></div></article>
+    <article class="service"><svg><use href="#i-diamond"/></svg><div><h3>ESTILIZAÇÃO</h3><p>Penteado e finalização com pomada. Pra sair pronto, do cabelo ao último detalhe.</p></div></article>
+    <article class="service"><svg><use href="#i-leaf"/></svg><div><h3>TRATAMENTO CAPILAR</h3><p>Hidratação escolhida conforme a necessidade dos seus fios. O barbeiro orienta o cuidado.</p></div></article>
+    <article class="service"><svg><use href="#i-chair"/></svg><div><h3>TRATAMENTO DO COURO CABELUDO</h3><p>Limpeza do couro cabeludo e remoção de resíduos de produtos. Converse com o barbeiro.</p></div></article>
+   </div></div></section>
+</div>
+<section class="team" id="equipe" aria-labelledby="team-title"><img class="team-photo" src="assets/team.webp" alt="Barbeiro profissional atendendo um cliente em uma barbearia com iluminação quente" width="1600" height="900" loading="lazy"><div class="container team-layout"><div class="team-copy"><h2 id="team-title">Quem está<br>do outro lado<br>da cadeira.</h2><span class="gold-line"></span><p>Aqui, o corte começa na conversa.<br>Conheça quem vai cuidar<br>do seu cabelo e da sua barba.</p><button class="button button-red" id="team-details">CONHEÇA A EQUIPE <svg><use href="#i-arrow"/></svg></button></div><div class="hours"><p class="eyebrow">HORÁRIOS DE ATENDIMENTO</p><h3>Pode chegar.</h3><dl><div><dt>Segunda a sexta</dt><dd>09h – 20h</dd></div><div><dt>Sábado</dt><dd>09h – 19h</dd></div><div><dt>Domingo</dt><dd>10h – 17h</dd></div></dl></div></div></section>
+<section class="styles-showcase" id="estilos" aria-labelledby="styles-title">
+ <div class="container">
+  <div class="styles-heading"><div><p class="eyebrow">NA CADEIRA</p><h2 id="styles-title">Qual vai ser o próximo?</h2></div><p>Gostou de um desses?<br>Mostre ao barbeiro e a gente adapta pra você.</p></div>
+  <div class="styles-gallery">
+   <button class="style-tile style-featured" data-style="0" aria-label="Ampliar visual: Volume clássico"><img src="assets/haircut.webp" alt="Corte masculino clássico com volume e acabamento definido" width="1100" height="619" loading="lazy"><span class="style-caption"><span class="style-kicker">TESOURA E FINALIZAÇÃO</span><strong>Volume clássico</strong><span class="style-discover">Ver de perto <svg><use href="#i-arrow"/></svg></span></span></button>
+   <button class="style-tile" data-style="1" aria-label="Ampliar visual: Degradê alinhado"><img src="assets/team.webp" alt="Barbeiro trabalhando no degradê de um corte masculino" width="1600" height="900" loading="lazy"><span class="style-caption"><span class="style-kicker">MÁQUINA E ACABAMENTO</span><strong>Degradê alinhado</strong><span class="style-discover">Ver de perto <svg><use href="#i-arrow"/></svg></span></span></button>
+   <button class="style-tile" data-style="2" aria-label="Ampliar visual: Barba na navalha"><img src="assets/beard.webp" alt="Cuidado profissional com o desenho e acabamento de uma barba" width="1100" height="619" loading="lazy"><span class="style-caption"><span class="style-kicker">TOALHA QUENTE E NAVALHA</span><strong>Barba na navalha</strong><span class="style-discover">Ver de perto <svg><use href="#i-arrow"/></svg></span></span></button>
+  </div>
+ </div>
+</section>
+</main>
+<footer class="footer" id="contato"><div class="footer-main container"><div class="footer-brand"><a class="brand" href="#inicio"><span class="brand-mark" aria-hidden="true"></span><span>SEU LOGO</span></a><p>Cabelo, barba e uma boa conversa.<br>Rua Augusta, São Paulo.</p></div><address class="contact-details"><a href="tel:+5511999999999"><svg><use href="#i-phone"/></svg>(11) 99999-9999</a><a href="mailto:contato@suabarbearia.com.br"><svg><use href="#i-mail"/></svg>contato@suabarbearia.com.br</a><p><svg><use href="#i-pin"/></svg>Rua Augusta, 1500 — São Paulo, SP</p></address><div class="newsletter"><h3>Novidades da barbearia.</h3><p>Deixe seu e-mail para acompanhar.</p><form id="newsletter-form"><label class="sr-only" for="newsletter-email">Seu e-mail</label><input type="email" id="newsletter-email" name="email" placeholder="Seu melhor e-mail" autocomplete="email" required><button type="submit" class="button button-red">INSCREVER</button></form><p class="form-status" id="newsletter-status" role="status"></p></div><div class="footer-social social" aria-label="Redes sociais"><a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X"><svg><use href="#i-twitter"/></svg></a><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg><use href="#i-instagram"/></svg></a><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg><use href="#i-youtube"/></svg></a></div></div><div class="footer-bottom container"><p>© <span id="year">2026</span> Seu Logo. Todos os direitos reservados.</p><nav aria-label="Navegação do rodapé"><a href="#inicio">Início</a><a href="#sobre">Sobre</a><a href="#servicos">Serviços</a><a href="#estilos">Estilos</a><a href="#contato">Contato</a></nav></div></footer>
+<dialog id="content-dialog" class="content-dialog"><button class="dialog-close" aria-label="Fechar janela">×</button><div id="dialog-body"></div></dialog>
+<dialog id="search-dialog" class="content-dialog search-dialog"><button class="dialog-close" aria-label="Fechar busca">×</button><p class="eyebrow">ENCONTRE O QUE PRECISA</p><h2>BUSCAR NO SITE</h2><label class="sr-only" for="site-search">Buscar serviços, estilos ou contato</label><input id="site-search" type="search" placeholder="Corte, barba, horários..." autocomplete="off"><ul id="search-results"></ul><p class="search-empty" hidden>Nenhum resultado. Tente “barba” ou “contato”.</p></dialog>
+</body>
+</html>
