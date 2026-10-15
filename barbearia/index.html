@@ -31,13 +31,14 @@
  <symbol id="i-razor" viewBox="0 0 48 48"><path d="m29 4 13 10-5 6L24 10zm-2 9L9 33l5 5 20-20M9 33l-4 7 8 3 24-26"/></symbol>
  <symbol id="i-diamond" viewBox="0 0 48 48"><path d="m4 16 8-11h24l8 11-20 27zm0 0h40M12 5l5 11 7 27 7-27 5-11M17 16l7-11 7 11"/></symbol>
  <symbol id="i-leaf" viewBox="0 0 48 48"><path d="M9 37C1 19 20 7 40 5c-1 21-7 37-27 32M7 44c4-13 13-21 25-29M13 31l2-10m5 4 10-1"/></symbol>
+ <symbol id="i-photo" viewBox="0 0 32 32"><rect x="4" y="5" width="24" height="22" rx="3"/><circle cx="12" cy="12" r="2.5"/><path d="m5 23 7-7 5 5 4-4 6 6"/></symbol>
  <symbol id="i-chair" viewBox="0 0 48 48"><path d="M16 5h15v20H16zM10 17v16h26V21h-5M10 17H6v7m30-3h6v8h-6M15 33v5h17v-5M24 38v6m-9 0h18M20 5V2h7"/></symbol>
 </svg>
 <header class="header container">
   <a class="brand" href="#inicio" aria-label="Seu Logo — Início"><span class="brand-mark" aria-hidden="true"></span><span>SEU LOGO</span></a>
-  <nav class="desktop-nav" aria-label="Navegação principal"><a class="active" href="#inicio">Início</a><a href="#servicos">Serviços</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a></nav>
+  <nav class="desktop-nav" aria-label="Navegação principal"><a class="active" href="#inicio">Início</a><a href="#servicos">Serviços</a><a href="#cortes">Cortes</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a></nav>
   <div class="header-tools"><button class="icon-button" id="search-toggle" aria-label="Buscar no site"><svg><use href="#i-search"/></svg></button><button class="icon-button" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-panel"><svg><use href="#i-menu"/></svg></button></div>
-  <nav class="menu-panel" id="menu-panel" aria-label="Menu" hidden><a href="#inicio">Início</a><a href="#servicos">Serviços</a><a href="#sobre">Sobre</a><a href="#estilos">Estilos</a><a href="#contato">Contato e agendamento</a></nav>
+  <nav class="menu-panel" id="menu-panel" aria-label="Menu" hidden><a href="#inicio">Início</a><a href="#servicos">Serviços</a><a href="#sobre">Sobre</a><a href="#cortes">Cortes</a><a href="#contato">Contato e agendamento</a></nav>
  </header>
  <main id="conteudo">
 <div class="opening">
@@ -59,18 +60,89 @@
    </div></div></section>
 </div>
 <section class="team" id="equipe" aria-labelledby="team-title"><img class="team-photo" src="assets/team.webp" alt="Barbeiro profissional atendendo um cliente em uma barbearia com iluminação quente" width="1600" height="900" loading="lazy"><div class="container team-layout"><div class="team-copy"><h2 id="team-title">Quem está<br>do outro lado<br>da cadeira.</h2><span class="gold-line"></span><p>Aqui, o corte começa na conversa.<br>Conheça quem vai cuidar<br>do seu cabelo e da sua barba.</p><button class="button button-red" id="team-details">CONHEÇA A EQUIPE <svg><use href="#i-arrow"/></svg></button></div><div class="hours"><p class="eyebrow">HORÁRIOS DE ATENDIMENTO</p><h3>Pode chegar.</h3><dl><div><dt>Segunda a sexta</dt><dd>09h – 20h</dd></div><div><dt>Sábado</dt><dd>09h – 19h</dd></div><div><dt>Domingo</dt><dd>10h – 17h</dd></div></dl></div></div></section>
-<section class="styles-showcase" id="estilos" aria-labelledby="styles-title">
+<section class="styles-showcase cuts-showcase" id="cortes" aria-labelledby="cuts-title">
+ <span id="estilos" class="cuts-anchor" aria-hidden="true"></span>
  <div class="container">
-  <div class="styles-heading"><div><p class="eyebrow">NA CADEIRA</p><h2 id="styles-title">Qual vai ser o próximo?</h2></div><p>Gostou de um desses?<br>Mostre ao barbeiro e a gente adapta pra você.</p></div>
-  <div class="styles-gallery">
-   <button class="style-tile style-featured" data-style="0" aria-label="Ampliar visual: Volume clássico"><img src="assets/haircut.webp" alt="Corte masculino clássico com volume e acabamento definido" width="1100" height="619" loading="lazy"><span class="style-caption"><span class="style-kicker">TESOURA E FINALIZAÇÃO</span><strong>Volume clássico</strong><span class="style-discover">Ver de perto <svg><use href="#i-arrow"/></svg></span></span></button>
-   <button class="style-tile" data-style="1" aria-label="Ampliar visual: Degradê alinhado"><img src="assets/team.webp" alt="Barbeiro trabalhando no degradê de um corte masculino" width="1600" height="900" loading="lazy"><span class="style-caption"><span class="style-kicker">MÁQUINA E ACABAMENTO</span><strong>Degradê alinhado</strong><span class="style-discover">Ver de perto <svg><use href="#i-arrow"/></svg></span></span></button>
-   <button class="style-tile" data-style="2" aria-label="Ampliar visual: Barba na navalha"><img src="assets/beard.webp" alt="Cuidado profissional com o desenho e acabamento de uma barba" width="1100" height="619" loading="lazy"><span class="style-caption"><span class="style-kicker">TOALHA QUENTE E NAVALHA</span><strong>Barba na navalha</strong><span class="style-discover">Ver de perto <svg><use href="#i-arrow"/></svg></span></span></button>
+  <div class="styles-heading cuts-heading"><div><p class="eyebrow">NOSSOS CORTES</p><h2 id="cuts-title">Do discreto<br>ao marcado.</h2></div><div class="cuts-intro"><p>O nome é só o começo. O comprimento, a transição e o acabamento são combinados na cadeira.</p><a class="cuts-contact-link" href="#contato">Converse com o barbeiro <svg><use href="#i-arrow"/></svg></a></div></div>
+  <div class="cuts-grid">
+   <article class="cut-card" aria-labelledby="cut-degrade-baixo">
+    <figure class="cut-photo" aria-label="Espaço reservado para foto do corte Degradê baixo">
+     <!-- FOTO: substitua .cut-photo-placeholder por <img class="cut-photo-image" src="assets/cortes/degrade-baixo.webp" alt="Corte Degradê baixo" width="800" height="1000" loading="lazy"> -->
+     <div class="cut-photo-placeholder"><span class="cut-photo-corner" aria-hidden="true"></span><div class="cut-photo-center"><svg aria-hidden="true"><use href="#i-photo"/></svg><span>Foto do corte</span><small>Em breve por aqui</small></div></div>
+     <figcaption class="cut-photo-caption"><span class="cut-index">01</span><span>Discreto nas laterais.</span></figcaption>
+    </figure>
+    <div class="cut-content"><h3 id="cut-degrade-baixo">Degradê baixo</h3><p class="cut-description">A transição começa perto da orelha e mantém mais presença na parte de cima.</p><dl class="cut-details">
+     <div><dt>Laterais</dt><dd>Transição baixa e suave</dd></div>
+     <div><dt>Topo</dt><dd>Comprimento a combinar</dd></div>
+     <div><dt>Acabamento</dt><dd>Contornos bem definidos</dd></div>
+    </dl><a class="cut-link" href="#contato" aria-label="Conversar sobre o corte Degradê baixo">Quero esse corte <svg><use href="#i-arrow"/></svg></a></div>
+   </article>
+   <article class="cut-card" aria-labelledby="cut-degrade-medio">
+    <figure class="cut-photo" aria-label="Espaço reservado para foto do corte Degradê médio">
+     <!-- FOTO: substitua .cut-photo-placeholder por <img class="cut-photo-image" src="assets/cortes/degrade-medio.webp" alt="Corte Degradê médio" width="800" height="1000" loading="lazy"> -->
+     <div class="cut-photo-placeholder"><span class="cut-photo-corner" aria-hidden="true"></span><div class="cut-photo-center"><svg aria-hidden="true"><use href="#i-photo"/></svg><span>Foto do corte</span><small>Em breve por aqui</small></div></div>
+     <figcaption class="cut-photo-caption"><span class="cut-index">02</span><span>Equilíbrio no desenho.</span></figcaption>
+    </figure>
+    <div class="cut-content"><h3 id="cut-degrade-medio">Degradê médio</h3><p class="cut-description">Uma transição mais aparente nas laterais, com o topo ajustado ao seu cabelo.</p><dl class="cut-details">
+     <div><dt>Laterais</dt><dd>Degradê na altura média</dd></div>
+     <div><dt>Topo</dt><dd>Curto ou texturizado</dd></div>
+     <div><dt>Acabamento</dt><dd>Conexão com a barba</dd></div>
+    </dl><a class="cut-link" href="#contato" aria-label="Conversar sobre o corte Degradê médio">Quero esse corte <svg><use href="#i-arrow"/></svg></a></div>
+   </article>
+   <article class="cut-card" aria-labelledby="cut-americano">
+    <figure class="cut-photo" aria-label="Espaço reservado para foto do corte Americano">
+     <!-- FOTO: substitua .cut-photo-placeholder por <img class="cut-photo-image" src="assets/cortes/americano.webp" alt="Corte Americano" width="800" height="1000" loading="lazy"> -->
+     <div class="cut-photo-placeholder"><span class="cut-photo-corner" aria-hidden="true"></span><div class="cut-photo-center"><svg aria-hidden="true"><use href="#i-photo"/></svg><span>Foto do corte</span><small>Em breve por aqui</small></div></div>
+     <figcaption class="cut-photo-caption"><span class="cut-index">03</span><span>Mais contraste no visual.</span></figcaption>
+    </figure>
+    <div class="cut-content"><h3 id="cut-americano">Americano</h3><p class="cut-description">Laterais bem trabalhadas e uma parte de cima que dá forma ao corte.</p><dl class="cut-details">
+     <div><dt>Laterais</dt><dd>Máquina e transição marcada</dd></div>
+     <div><dt>Topo</dt><dd>Volume bem desenhado</dd></div>
+     <div><dt>Acabamento</dt><dd>Frente e contornos alinhados</dd></div>
+    </dl><a class="cut-link" href="#contato" aria-label="Conversar sobre o corte Americano">Quero esse corte <svg><use href="#i-arrow"/></svg></a></div>
+   </article>
+   <article class="cut-card" aria-labelledby="cut-social-classico">
+    <figure class="cut-photo" aria-label="Espaço reservado para foto do corte Social clássico">
+     <!-- FOTO: substitua .cut-photo-placeholder por <img class="cut-photo-image" src="assets/cortes/social-classico.webp" alt="Corte Social clássico" width="800" height="1000" loading="lazy"> -->
+     <div class="cut-photo-placeholder"><span class="cut-photo-corner" aria-hidden="true"></span><div class="cut-photo-center"><svg aria-hidden="true"><use href="#i-photo"/></svg><span>Foto do corte</span><small>Em breve por aqui</small></div></div>
+     <figcaption class="cut-photo-caption"><span class="cut-index">04</span><span>O clássico de todo dia.</span></figcaption>
+    </figure>
+    <div class="cut-content"><h3 id="cut-social-classico">Social clássico</h3><p class="cut-description">Um corte de linhas limpas, fácil de pentear e de manter na rotina.</p><dl class="cut-details">
+     <div><dt>Laterais</dt><dd>Ajustadas, sem excessos</dd></div>
+     <div><dt>Topo</dt><dd>Caimento lateral ou natural</dd></div>
+     <div><dt>Acabamento</dt><dd>Discreto e bem conectado</dd></div>
+    </dl><a class="cut-link" href="#contato" aria-label="Conversar sobre o corte Social clássico">Quero esse corte <svg><use href="#i-arrow"/></svg></a></div>
+   </article>
+   <article class="cut-card" aria-labelledby="cut-na-tesoura">
+    <figure class="cut-photo" aria-label="Espaço reservado para foto do corte Na tesoura">
+     <!-- FOTO: substitua .cut-photo-placeholder por <img class="cut-photo-image" src="assets/cortes/na-tesoura.webp" alt="Corte Na tesoura" width="800" height="1000" loading="lazy"> -->
+     <div class="cut-photo-placeholder"><span class="cut-photo-corner" aria-hidden="true"></span><div class="cut-photo-center"><svg aria-hidden="true"><use href="#i-photo"/></svg><span>Foto do corte</span><small>Em breve por aqui</small></div></div>
+     <figcaption class="cut-photo-caption"><span class="cut-index">05</span><span>Movimento sem exagero.</span></figcaption>
+    </figure>
+    <div class="cut-content"><h3 id="cut-na-tesoura">Na tesoura</h3><p class="cut-description">O comprimento é trabalhado na tesoura para respeitar o caimento dos fios.</p><dl class="cut-details">
+     <div><dt>Laterais</dt><dd>Comprimento mais natural</dd></div>
+     <div><dt>Topo</dt><dd>Textura e movimento</dd></div>
+     <div><dt>Acabamento</dt><dd>Leve, sem linhas marcadas</dd></div>
+    </dl><a class="cut-link" href="#contato" aria-label="Conversar sobre o corte Na tesoura">Quero esse corte <svg><use href="#i-arrow"/></svg></a></div>
+   </article>
+   <article class="cut-card" aria-labelledby="cut-raspado-alinhado">
+    <figure class="cut-photo" aria-label="Espaço reservado para foto do corte Raspado alinhado">
+     <!-- FOTO: substitua .cut-photo-placeholder por <img class="cut-photo-image" src="assets/cortes/raspado-alinhado.webp" alt="Corte Raspado alinhado" width="800" height="1000" loading="lazy"> -->
+     <div class="cut-photo-placeholder"><span class="cut-photo-corner" aria-hidden="true"></span><div class="cut-photo-center"><svg aria-hidden="true"><use href="#i-photo"/></svg><span>Foto do corte</span><small>Em breve por aqui</small></div></div>
+     <figcaption class="cut-photo-caption"><span class="cut-index">06</span><span>Curto. Limpo. Bem feito.</span></figcaption>
+    </figure>
+    <div class="cut-content"><h3 id="cut-raspado-alinhado">Raspado alinhado</h3><p class="cut-description">Pouco comprimento, desenho preciso e atenção aos detalhes do contorno.</p><dl class="cut-details">
+     <div><dt>Laterais</dt><dd>Máquina mais rente</dd></div>
+     <div><dt>Topo</dt><dd>Altura curta e uniforme</dd></div>
+     <div><dt>Acabamento</dt><dd>Contorno desenhado</dd></div>
+    </dl><a class="cut-link" href="#contato" aria-label="Conversar sobre o corte Raspado alinhado">Quero esse corte <svg><use href="#i-arrow"/></svg></a></div>
+   </article>
   </div>
+  <div class="cuts-note"><svg aria-hidden="true"><use href="#i-scissors"/></svg><p>Tem outra referência? Traga uma foto. A gente conversa sobre o que funciona para o seu cabelo.</p><a href="#contato">Fale com a gente <svg><use href="#i-arrow"/></svg></a></div>
  </div>
 </section>
 </main>
-<footer class="footer" id="contato"><div class="footer-main container"><div class="footer-brand"><a class="brand" href="#inicio"><span class="brand-mark" aria-hidden="true"></span><span>SEU LOGO</span></a><p>Cabelo, barba e uma boa conversa.<br>Rua Augusta, São Paulo.</p></div><address class="contact-details"><a href="tel:+5511999999999"><svg><use href="#i-phone"/></svg>(11) 99999-9999</a><a href="mailto:contato@suabarbearia.com.br"><svg><use href="#i-mail"/></svg>contato@suabarbearia.com.br</a><p><svg><use href="#i-pin"/></svg>Rua Augusta, 1500 — São Paulo, SP</p></address><div class="newsletter"><h3>Novidades da barbearia.</h3><p>Deixe seu e-mail para acompanhar.</p><form id="newsletter-form"><label class="sr-only" for="newsletter-email">Seu e-mail</label><input type="email" id="newsletter-email" name="email" placeholder="Seu melhor e-mail" autocomplete="email" required><button type="submit" class="button button-red">INSCREVER</button></form><p class="form-status" id="newsletter-status" role="status"></p></div><div class="footer-social social" aria-label="Redes sociais"><a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X"><svg><use href="#i-twitter"/></svg></a><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg><use href="#i-instagram"/></svg></a><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg><use href="#i-youtube"/></svg></a></div></div><div class="footer-bottom container"><p>© <span id="year">2026</span> Seu Logo. Todos os direitos reservados.</p><nav aria-label="Navegação do rodapé"><a href="#inicio">Início</a><a href="#sobre">Sobre</a><a href="#servicos">Serviços</a><a href="#estilos">Estilos</a><a href="#contato">Contato</a></nav></div></footer>
+<footer class="footer" id="contato"><div class="footer-main container"><div class="footer-brand"><a class="brand" href="#inicio"><span class="brand-mark" aria-hidden="true"></span><span>SEU LOGO</span></a><p>Cabelo, barba e uma boa conversa.<br>Rua Augusta, São Paulo.</p></div><address class="contact-details"><a href="tel:+5511999999999"><svg><use href="#i-phone"/></svg>(11) 99999-9999</a><a href="mailto:contato@suabarbearia.com.br"><svg><use href="#i-mail"/></svg>contato@suabarbearia.com.br</a><p><svg><use href="#i-pin"/></svg>Rua Augusta, 1500 — São Paulo, SP</p></address><div class="newsletter"><h3>Novidades da barbearia.</h3><p>Deixe seu e-mail para acompanhar.</p><form id="newsletter-form"><label class="sr-only" for="newsletter-email">Seu e-mail</label><input type="email" id="newsletter-email" name="email" placeholder="Seu melhor e-mail" autocomplete="email" required><button type="submit" class="button button-red">INSCREVER</button></form><p class="form-status" id="newsletter-status" role="status"></p></div><div class="footer-social social" aria-label="Redes sociais"><a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X"><svg><use href="#i-twitter"/></svg></a><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg><use href="#i-instagram"/></svg></a><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg><use href="#i-youtube"/></svg></a></div></div><div class="footer-bottom container"><p>© <span id="year">2026</span> Seu Logo. Todos os direitos reservados.</p><nav aria-label="Navegação do rodapé"><a href="#inicio">Início</a><a href="#sobre">Sobre</a><a href="#servicos">Serviços</a><a href="#cortes">Cortes</a><a href="#contato">Contato</a></nav></div></footer>
 <dialog id="content-dialog" class="content-dialog"><button class="dialog-close" aria-label="Fechar janela">×</button><div id="dialog-body"></div></dialog>
 <dialog id="search-dialog" class="content-dialog search-dialog"><button class="dialog-close" aria-label="Fechar busca">×</button><p class="eyebrow">ENCONTRE O QUE PRECISA</p><h2>BUSCAR NO SITE</h2><label class="sr-only" for="site-search">Buscar serviços, estilos ou contato</label><input id="site-search" type="search" placeholder="Corte, barba, horários..." autocomplete="off"><ul id="search-results"></ul><p class="search-empty" hidden>Nenhum resultado. Tente “barba” ou “contato”.</p></dialog>
 </body>

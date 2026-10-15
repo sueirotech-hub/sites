@@ -38,3 +38,10 @@ Paleta de tinta preta, verde profundo, vinho, tabaco, latão e papel quente. Tí
 Animações implementadas em código próprio a partir dos padrões apresentados nos catálogos https://naocodei.com/free-code-css/ e https://naocodei.com/free-code/: fade-in, subir e aparecer, cascata, cortina, sublinhado, flutuação, brilho no botão, revelação por palavras, inclinação e janela que nasce do elemento acionado.
 
 O conteúdo continua visível sem JavaScript. Preferência por movimento reduzido desativa entradas, inclinação, levitação e transições; alterações dessa preferência durante a navegação também são respeitadas. A rolagem permanece nativa, e as entradas acontecem apenas uma vez. Elementos focados pelo teclado são revelados imediatamente. A levitação pausa quando o hero sai da tela.
+
+
+## Vitrine de cortes
+
+A antiga galeria de três imagens foi substituída por uma vitrine de seis cortes em `#cortes`, mantendo o endereço `#estilos` como atalho compatível. A seção segue as fontes, cores e animações da página e tem seis espaços reservados sem imagens nem requisições quebradas. Cada corte mostra nome, descrição, laterais, topo, acabamento e link para o contato.
+
+A grade usa três colunas no desktop, duas no tablet e uma no celular. Os cartões entram em cascata respeitando movimento reduzido. As fotos podem ser inseridas depois seguindo `assets/cortes/LEIA-ME.md`; cada bloco do HTML já contém o elemento img de exemplo em um comentário.

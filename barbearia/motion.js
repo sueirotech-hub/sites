@@ -84,6 +84,10 @@
     register(document.querySelector('.gold-line'), 'fade', 90);
     register(document.querySelector('.team-copy .button'), 'rise', 180);
     register(document.querySelector('.hours'), 'rise', 130);
+    const cutColumns = window.matchMedia('(max-width: 600px)').matches ? 1 : window.matchMedia('(max-width: 1000px)').matches ? 2 : 3;
+    document.querySelectorAll('.cut-card').forEach((card, index) => register(card, 'rise', (index % cutColumns) * 95));
+    register(document.querySelector('.cuts-intro'), 'rise', 90);
+    register(document.querySelector('.cuts-note'), 'fade', 120);
     document.querySelectorAll('.style-tile').forEach((tile, index) => {
       register(tile, 'fade', index * 110);
       let frame = 0;

@@ -43,25 +43,6 @@ document.querySelectorAll('dialog').forEach(element => {
     if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) element.close();
   });
 });
-// Galeria de inspirações: fotografia ampliada e próximo passo para contato.
-const styles = [
-  { title: 'Volume clássico', image: 'haircut.webp', description: 'Topo com volume, laterais mais curtas e finalização com pomada. Leve esta referência: o barbeiro ajusta o comprimento para o seu cabelo.' },
-  { title: 'Degradê alinhado', image: 'team.webp', description: 'Laterais em degradê e topo com textura. Antes de começar, a gente combina a altura do degradê e quanto você quer tirar em cima.' },
-  { title: 'Barba na navalha', image: 'beard.webp', description: 'Barba aparada, contornos definidos e acabamento na navalha. Você escolhe o comprimento e a gente acerta o desenho.' }
-];
-document.querySelectorAll('[data-style]').forEach(button => button.addEventListener('click', () => {
-  const style = styles[Number(button.dataset.style)];
-  dialogBody.replaceChildren();
-  const eyebrow = document.createElement('p'); eyebrow.className = 'eyebrow'; eyebrow.textContent = 'INSPIRAÇÃO PARA O SEU PRÓXIMO VISUAL';
-  const heading = document.createElement('h2'); heading.id = 'dialog-title'; heading.textContent = style.title;
-  const image = document.createElement('img'); image.src = 'assets/' + style.image; image.alt = style.title;
-  const description = document.createElement('p'); description.textContent = style.description;
-  const contact = document.createElement('a'); contact.className = 'button button-red'; contact.href = '#contato'; contact.textContent = 'QUERO ESSE ESTILO →';
-  contact.addEventListener('click', () => dialog.close());
-  dialogBody.append(eyebrow, heading, image, description, contact);
-  dialog.setAttribute('aria-labelledby', 'dialog-title');
-  if (window.openBarberDialog) window.openBarberDialog(dialog, button); else dialog.showModal();
-}));
 document.querySelector('#team-details').addEventListener('click', () => {
   dialogBody.innerHTML = '<p class="eyebrow">QUEM CUIDA DO SEU ESTILO</p><h2 id="dialog-title">Nossa equipe</h2><img src="assets/team.webp" alt="Barbeiro atendendo um cliente"><h3>RAFAEL · CORTE E ESTILIZAÇÃO</h3><p>Precisão no degradê, atenção ao formato e acabamento em cada detalhe.</p><h3>BRUNO · BARBA E BARBOTERAPIA</h3><p>Desenho de barba, cuidado com os fios e o conforto de uma toalha quente.</p><a class="button button-red" href="#contato" id="team-contact">FALE COM A GENTE →</a>';
   dialog.setAttribute('aria-labelledby', 'dialog-title');
@@ -80,7 +61,7 @@ const searchable = [
   ['Sobre a barbearia', '#sobre', 'sobre tradição história'],
   ['Nossa equipe', '#equipe', 'equipe profissionais barbeiros'],
   ['Horários de atendimento', '#equipe', 'horários segunda sexta sábado domingo aberto'],
-  ['Inspirações de estilo', '#estilos', 'estilos inspirações galeria visual corte barba'],
+  ['Catálogo de cortes', '#cortes', 'cortes estilos galeria degradê baixo médio americano social tesoura raspado'],
   ['Contato e agendamento', '#contato', 'contato endereço são paulo telefone email agendar agendamento']
 ];
 const normalize = value => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
