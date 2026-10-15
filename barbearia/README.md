@@ -54,3 +54,7 @@ A grade usa três colunas no desktop, duas no tablet e uma no celular. Os cartõ
 - A máquina mantém a levitação e as entradas agora usam Web Animations API, com dois quadros de preparação e compatibilidade por transição CSS. Entradas voltam a acontecer ao revisitar as seções.
 - O controle “Ativar animações / Reduzir animações” no menu e no rodapé permite uma escolha explícita, salva apenas como preferência visual no navegador. A preferência do sistema é respeitada inicialmente. Mudanças de preferência reativam o mecanismo corretamente; retornos pelo histórico também o reinicializam.
 - Os arquivos CSS e JS recebem um identificador de versão para evitar que o navegador combine estilos e scripts antigos.
+
+## Agendamento aberto e centralizado
+
+O agendamento usa a largura da seção, com título centralizado e sem cartão, borda externa, sombra ou fundo próprio no formulário. Serviço, dia e período ocupam uma primeira faixa; os horários ficam centralizados em uma faixa mais larga; nome, telefone e observação se distribuem abaixo, seguidos pela ação central. As informações da barbearia fecham a seção em uma linha discreta. No celular, os campos se reorganizam sem alterar a ordem de leitura ou a lógica de solicitação.

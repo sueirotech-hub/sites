@@ -112,7 +112,7 @@
     register(document.querySelector('.gold-line'),'fade');register(document.querySelector('.team-copy .button'),'rise',130);register(document.querySelector('.hours'),'rise',150);
     const columns = window.matchMedia('(max-width:600px)').matches ? 1 : window.matchMedia('(max-width:1000px)').matches ? 2 : 3;
     document.querySelectorAll('.cut-card').forEach((element,index)=>register(element,'rise',(index%columns)*110));
-    document.querySelectorAll('.cuts-intro,.cuts-note,.booking-form,.booking-info').forEach(element=>register(element,'rise',110));
+    document.querySelectorAll('.cuts-intro,.cuts-note,.booking-preferences,.booking-period,.booking-time-field,.booking-contact,.booking-notes,.booking-submit,.booking-info,.booking-phone').forEach(element=>register(element,'rise',110));
     document.querySelectorAll('.footer-brand,.contact-details,.newsletter,.footer-social').forEach((element,index)=>register(element,'fade',index*65));
     document.querySelectorAll('.cut-card').forEach(card=>{
       card.addEventListener('pointermove',event=>{

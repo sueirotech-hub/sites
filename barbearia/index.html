@@ -9,9 +9,9 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/clipper.webp" as="image" fetchpriority="high">
   <link rel="stylesheet" href="fonts.css">
-  <link rel="stylesheet" href="styles.css?v=agenda-20261015">
+  <link rel="stylesheet" href="styles.css?v=agenda-aberta-20261015">
   <script src="script.js?v=agenda-20261015" defer></script>
-  <script src="motion.js?v=agenda-20261015" defer></script>
+  <script src="motion.js?v=agenda-aberta-20261015" defer></script>
   <script src="booking.js?v=agenda-20261015" defer></script>
 </head>
 <body>
@@ -142,24 +142,21 @@
   <div class="cuts-note"><svg aria-hidden="true"><use href="#i-scissors"/></svg><p>Tem outra referência? Traga uma foto. A gente conversa sobre o que funciona para o seu cabelo.</p><a href="#contato">Fale com a gente <svg><use href="#i-arrow"/></svg></a></div>
  </div>
 </section>
-<section class="booking" id="agendar" aria-labelledby="booking-title" data-whatsapp="">
- <!-- Integração opcional: preencha data-whatsapp com o número real da barbearia (DDI + DDD + número). Não use o telefone fictício da demonstração. -->
+<section class="booking booking-open" id="agendar" aria-labelledby="booking-title" data-whatsapp="">
+ <!-- Integração opcional: informe o número real da barbearia em data-whatsapp. -->
  <div class="container booking-layout">
-  <div class="booking-copy"><p class="eyebrow">AGENDAMENTO</p><h2 id="booking-title">Vamos marcar<br>seu próximo corte?</h2><p>Escolha o serviço, o dia e o horário que você prefere. A confirmação é feita pela barbearia, depois de conferir a agenda.</p>
-   <div class="booking-info"><div><svg aria-hidden="true"><use href="#i-pin"/></svg><p><strong>Nos encontre na Augusta.</strong><span>Rua Augusta, 1500<br>São Paulo, SP</span></p></div><div><svg aria-hidden="true"><use href="#i-scissors"/></svg><p><strong>Traga sua referência.</strong><span>Pode ser uma foto, o nome de um corte ou só uma ideia. A gente conversa na cadeira.</span></p></div></div>
-   <a class="booking-phone" href="tel:+5511999999999"><svg aria-hidden="true"><use href="#i-phone"/></svg>Prefere ligar? (11) 99999-9999</a>
-  </div>
+  <header class="booking-copy"><p class="eyebrow">AGENDAMENTO</p><h2 id="booking-title">Vamos marcar<br>seu próximo corte?</h2><p>Escolha o serviço, o dia e o horário que você prefere. A confirmação é feita pela barbearia, depois de conferir a agenda.</p></header>
   <form class="booking-form" id="booking-form">
-   <div class="booking-form-heading"><span class="eyebrow">SEU PRÓXIMO HORÁRIO</span><p>Como podemos cuidar do seu visual?</p></div>
-   <div class="booking-fields"><div class="booking-field"><label for="booking-service">Serviço</label><select id="booking-service" name="servico" required><option value="corte">Corte de cabelo · 30 min</option><option value="barba">Barba · 30 min</option><option value="corte-barba">Corte + barba · 60 min</option><option value="barboterapia">Barboterapia · 45 min</option><option value="estilizacao">Estilização · 30 min</option><option value="tratamento">Tratamento capilar · 45 min</option></select></div><div class="booking-field"><label for="booking-date">Dia desejado</label><input id="booking-date" name="data" type="date" required aria-describedby="booking-date-help"><small id="booking-date-help">Datas e horários de São Paulo.</small></div></div>
+   <div class="booking-fields booking-preferences"><div class="booking-field"><label for="booking-service">Serviço</label><select id="booking-service" name="servico" required><option value="corte">Corte de cabelo · 30 min</option><option value="barba">Barba · 30 min</option><option value="corte-barba">Corte + barba · 60 min</option><option value="barboterapia">Barboterapia · 45 min</option><option value="estilizacao">Estilização · 30 min</option><option value="tratamento">Tratamento capilar · 45 min</option></select></div><div class="booking-field"><label for="booking-date">Dia desejado</label><input id="booking-date" name="data" type="date" required aria-describedby="booking-date-help"><small id="booking-date-help">Datas e horários de São Paulo.</small></div></div>
    <fieldset class="booking-period"><legend>Qual período funciona melhor?</legend><div class="booking-period-options"><label><input type="radio" name="periodo" value="manha" checked><span>Manhã</span></label><label><input type="radio" name="periodo" value="tarde"><span>Tarde</span></label><label><input type="radio" name="periodo" value="noite"><span>Noite</span></label></div></fieldset>
    <fieldset class="booking-time-field"><legend>Horário preferido</legend><p class="booking-time-help">Opções para solicitar, sujeitas à confirmação da agenda.</p><div class="booking-times" id="booking-times"></div><p class="booking-empty" id="booking-empty" role="status" hidden>Não há horários para esse período. Tente outro período ou outra data.</p></fieldset>
-   <div class="booking-fields"><div class="booking-field"><label for="booking-name">Seu nome</label><input id="booking-name" name="nome" type="text" autocomplete="name" minlength="2" maxlength="80" placeholder="Como podemos te chamar?" required></div><div class="booking-field"><label for="booking-phone">WhatsApp ou telefone</label><input id="booking-phone" name="telefone" type="tel" inputmode="tel" autocomplete="tel" maxlength="20" placeholder="(11) 99999-9999" required></div></div>
+   <div class="booking-fields booking-contact"><div class="booking-field"><label for="booking-name">Seu nome</label><input id="booking-name" name="nome" type="text" autocomplete="name" minlength="2" maxlength="80" placeholder="Como podemos te chamar?" required></div><div class="booking-field"><label for="booking-phone">WhatsApp ou telefone</label><input id="booking-phone" name="telefone" type="tel" inputmode="tel" autocomplete="tel" maxlength="20" placeholder="(11) 99999-9999" required></div></div>
    <div class="booking-field booking-notes"><label for="booking-notes">Alguma referência ou observação? <span>(opcional)</span></label><textarea id="booking-notes" name="observacoes" rows="2" maxlength="400" placeholder="Ex.: degradê baixo, mantendo o comprimento em cima."></textarea></div>
    <p class="booking-error" id="booking-error" role="alert" hidden></p><button class="button button-red booking-submit" type="submit">PREPARAR SOLICITAÇÃO <svg aria-hidden="true"><use href="#i-arrow"/></svg></button><p class="booking-disclaimer">Escolher um horário não confirma uma reserva. Seus dados não são enviados nem armazenados ao preparar o pedido.</p>
    <noscript><p class="booking-error">Ative o JavaScript para escolher os horários ou entre em contato pelo telefone informado.</p></noscript>
    <section class="booking-result" id="booking-result" aria-labelledby="booking-result-title" hidden><p class="eyebrow">PEDIDO PREPARADO</p><h3 id="booking-result-title" tabindex="-1">Seu pedido está pronto.</h3><p id="booking-result-help">Ainda não foi enviado. Copie a solicitação e envie à barbearia pelo canal de contato de sua preferência. Aguarde a confirmação.</p><label class="sr-only" for="booking-draft">Texto da solicitação de agendamento</label><textarea id="booking-draft" readonly rows="8"></textarea><div class="booking-result-actions"><button class="button button-gold" id="booking-copy" type="button">COPIAR PEDIDO</button><a class="button button-red" id="booking-whatsapp" target="_blank" rel="noopener noreferrer" hidden>ENVIAR PELO WHATSAPP</a></div><p id="booking-copy-status" class="booking-copy-status" role="status"></p></section>
   </form>
+  <div class="booking-meta"><div class="booking-info"><div><svg aria-hidden="true"><use href="#i-pin"/></svg><p><strong>Nos encontre na Augusta.</strong><span>Rua Augusta, 1500 · São Paulo, SP</span></p></div><div><svg aria-hidden="true"><use href="#i-scissors"/></svg><p><strong>Traga sua referência.</strong><span>Uma foto, um corte ou uma ideia. A gente acerta os detalhes na cadeira.</span></p></div></div><a class="booking-phone" href="tel:+5511999999999"><svg aria-hidden="true"><use href="#i-phone"/></svg><span>Prefere ligar?<strong>(11) 99999-9999</strong></span></a></div>
  </div>
 </section>
 </main>
