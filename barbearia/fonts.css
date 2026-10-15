@@ -1,35 +1,35 @@
 @font-face {
-  font-family: 'Alfa Slab One';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(assets/fonts/alfa-slab-one-400.woff) format('woff');
-}
-@font-face {
-  font-family: 'Bitter';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url(assets/fonts/bitter-500.woff) format('woff');
-}
-@font-face {
-  font-family: 'Bitter';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url(assets/fonts/bitter-600.woff) format('woff');
-}
-@font-face {
-  font-family: 'Bitter';
+  font-family: 'Big Shoulders Display';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url(assets/fonts/bitter-700.woff) format('woff');
+  src: url(assets/fonts/big-shoulders-display-700.woff) format('woff');
 }
 @font-face {
-  font-family: 'Yellowtail';
+  font-family: 'Big Shoulders Display';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(assets/fonts/big-shoulders-display-800.woff) format('woff');
+}
+@font-face {
+  font-family: 'Alegreya Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(assets/fonts/alegreya-sans-500.woff) format('woff');
+}
+@font-face {
+  font-family: 'Alegreya Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(assets/fonts/alegreya-sans-700.woff) format('woff');
+}
+@font-face {
+  font-family: 'Berkshire Swash';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(assets/fonts/yellowtail-400.woff) format('woff');
+  src: url(assets/fonts/berkshire-swash-400.woff) format('woff');
 }

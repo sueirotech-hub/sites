@@ -1,15 +1,15 @@
 'use strict';
-/* Entradas determinísticas, sem depender do primeiro quadro do navegador.
-   A preferência do sistema é respeitada; o visitante pode escolher no rodapé. */
+/* Movimento automático no computador, sem controles ou preferência salva.
+   Em dispositivos móveis, a redução de movimento do sistema é respeitada. */
 (() => {
   const root = document.documentElement;
   const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
   const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
-  const buttons = Array.from(document.querySelectorAll('[data-motion-toggle]'));
+  const desktop = window.matchMedia('(min-width: 761px)');
+  const desktopPointer = window.matchMedia('(any-hover: hover) and (any-pointer: fine)');
   const records = [];
   const running = new Set();
-  let observer, heroObserver, generation = 0, reduced = true, choice = 'auto';
-  try { const saved = localStorage.getItem('barbearia-motion'); if (saved === 'full' || saved === 'reduced') choice = saved; } catch (_) {}
+  let observer, heroObserver, generation = 0, reduced = true;
   const listen = (query, listener) => { if (typeof query.addEventListener === 'function') query.addEventListener('change', listener); else if (typeof query.addListener === 'function') query.addListener(listener); };
   function register(element, mode = 'rise', delay = 0) {
     if (!element || records.some(record => record.element === element)) return;
@@ -68,10 +68,10 @@
   }
   function start() {
     stop();
-    reduced = choice === 'reduced' || (choice === 'auto' && preference.matches);
+    const computer = desktop.matches || desktopPointer.matches;
+    reduced = !computer && preference.matches;
     root.setAttribute('data-motion', reduced ? 'reduced' : 'enabled');
-    if (choice === 'full') root.setAttribute('data-motion-choice', 'full'); else root.removeAttribute('data-motion-choice');
-    buttons.forEach(button => { button.textContent = reduced ? 'Ativar animações' : 'Reduzir animações'; button.setAttribute('aria-pressed', String(!reduced)); });
+    if (computer) root.setAttribute('data-motion-desktop', ''); else root.removeAttribute('data-motion-desktop');
     const clipper = document.querySelector('.hero-clipper'); if (clipper) clipper.style.animationPlayState = reduced ? 'paused' : 'running';
     if (reduced) return;
     records.forEach(record => { record.entered = false; record.element.classList.remove('is-visible'); record.element.classList.add('is-pending'); });
@@ -123,10 +123,9 @@
       });
       card.addEventListener('pointerleave',()=>{card.style.setProperty('--card-rx','0deg');card.style.setProperty('--card-ry','0deg');});
     });
-    buttons.forEach(button => button.addEventListener('click',()=>{
-      choice = reduced ? 'full' : 'reduced'; try {localStorage.setItem('barbearia-motion',choice);} catch (_) {} start();
-    }));
-    listen(preference,()=>{if(choice==='auto')start();});
+    listen(preference,start);
+    listen(desktop,start);
+    listen(desktopPointer,start);
     window.addEventListener('pageshow',event=>{if(event.persisted)start();});
     document.addEventListener('focusin',event=>{const record=records.find(item=>item.element.contains(event.target));if(record)play(record,true);});
     document.addEventListener('visibilitychange',()=>{const clipper=document.querySelector('.hero-clipper');if(clipper)clipper.style.animationPlayState=document.hidden||reduced?'paused':'running';});
