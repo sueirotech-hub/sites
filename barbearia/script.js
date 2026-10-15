@@ -19,7 +19,7 @@ document.addEventListener('keydown', event => {
 // A navegação acompanha a seção mais próxima do topo da tela.
 const navigationLinks = [...document.querySelectorAll('.desktop-nav a')];
 const observedSections = navigationLinks.map(link => document.querySelector(link.getAttribute('href')));
-const intersectionObserver = new IntersectionObserver(entries => {
+const intersectionObserver = 'IntersectionObserver' in window ? new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) navigationLinks.forEach(link => {
       const selected = link.hash === '#' + entry.target.id;
@@ -28,8 +28,8 @@ const intersectionObserver = new IntersectionObserver(entries => {
       else link.removeAttribute('aria-current');
     });
   });
-}, { rootMargin: '-10% 0px -65% 0px', threshold: 0 });
-observedSections.forEach(section => intersectionObserver.observe(section));
+}, { rootMargin: '-10% 0px -65% 0px', threshold: 0 }) : null;
+if (intersectionObserver) observedSections.filter(Boolean).forEach(section => intersectionObserver.observe(section));
 document.querySelector('#year').textContent = String(new Date().getFullYear());
 
 // Janelas nativas: foco gerenciado pelo navegador, fechamento por Escape.
@@ -62,7 +62,8 @@ const searchable = [
   ['Nossa equipe', '#equipe', 'equipe profissionais barbeiros'],
   ['Horários de atendimento', '#equipe', 'horários segunda sexta sábado domingo aberto'],
   ['Catálogo de cortes', '#cortes', 'cortes estilos galeria degradê baixo médio americano social tesoura raspado'],
-  ['Contato e agendamento', '#contato', 'contato endereço são paulo telefone email agendar agendamento']
+  ['Agendar horário', '#agendar', 'agendar agendamento reservar horário serviço data corte barba'],
+  ['Contato', '#contato', 'contato endereço são paulo telefone email']
 ];
 const normalize = value => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
 function search() {

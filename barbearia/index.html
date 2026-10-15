@@ -9,9 +9,10 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/clipper.webp" as="image" fetchpriority="high">
   <link rel="stylesheet" href="fonts.css">
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
-  <script src="motion.js" defer></script>
+  <link rel="stylesheet" href="styles.css?v=agenda-20261015">
+  <script src="script.js?v=agenda-20261015" defer></script>
+  <script src="motion.js?v=agenda-20261015" defer></script>
+  <script src="booking.js?v=agenda-20261015" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
@@ -36,14 +37,14 @@
 </svg>
 <header class="header container">
   <a class="brand" href="#inicio" aria-label="Seu Logo — Início"><span class="brand-mark" aria-hidden="true"></span><span>SEU LOGO</span></a>
-  <nav class="desktop-nav" aria-label="Navegação principal"><a class="active" href="#inicio">Início</a><a href="#servicos">Serviços</a><a href="#cortes">Cortes</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a></nav>
+  <nav class="desktop-nav" aria-label="Navegação principal"><a class="active" href="#inicio">Início</a><a href="#servicos">Serviços</a><a href="#cortes">Cortes</a><a href="#sobre">Sobre</a><a href="#agendar">Agendar</a></nav>
   <div class="header-tools"><button class="icon-button" id="search-toggle" aria-label="Buscar no site"><svg><use href="#i-search"/></svg></button><button class="icon-button" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-panel"><svg><use href="#i-menu"/></svg></button></div>
-  <nav class="menu-panel" id="menu-panel" aria-label="Menu" hidden><a href="#inicio">Início</a><a href="#servicos">Serviços</a><a href="#sobre">Sobre</a><a href="#cortes">Cortes</a><a href="#contato">Contato e agendamento</a></nav>
+  <nav class="menu-panel" id="menu-panel" aria-label="Menu" hidden><a href="#inicio">Início</a><a href="#servicos">Serviços</a><a href="#sobre">Sobre</a><a href="#cortes">Cortes</a><a href="#agendar">Agendar horário</a><a href="#contato">Contato</a><button class="motion-toggle menu-motion-toggle" data-motion-toggle type="button" aria-pressed="true">Animações</button></nav>
  </header>
  <main id="conteudo">
 <div class="opening">
   <section class="hero" id="inicio" aria-labelledby="hero-title">
-   <div class="hero-stage container"><h1 id="hero-title">BARBEARIA</h1><img class="hero-clipper" src="assets/clipper.webp" alt="Máquina profissional de corte preta e prateada" width="640" height="1000" fetchpriority="high"><p class="hero-script">Estilo e tradição</p><div class="hero-copy"><p class="hero-tagline">Corte bem feito. Barba em dia.</p><p>Corte na tesoura, degradê e barba na navalha.<br>Conta pra gente como você gosta. A gente cuida do acabamento.</p><a class="button button-gold" href="#contato">FALE COM A GENTE <svg><use href="#i-arrow"/></svg></a></div></div>
+   <div class="hero-stage container"><h1 id="hero-title">BARBEARIA</h1><img class="hero-clipper" src="assets/clipper.webp" alt="Máquina profissional de corte preta e prateada" width="640" height="1000" fetchpriority="high"><p class="hero-script">Estilo e tradição</p><div class="hero-copy"><p class="hero-tagline">Corte bem feito. Barba em dia.</p><p>Corte na tesoura, degradê e barba na navalha.<br>Conta pra gente como você gosta. A gente cuida do acabamento.</p><a class="button button-gold" href="#agendar">AGENDAR HORÁRIO <svg><use href="#i-arrow"/></svg></a></div></div>
    <div class="hero-social social" aria-label="Redes sociais"><a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X"><svg><use href="#i-twitter"/></svg></a><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg><use href="#i-instagram"/></svg></a><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg><use href="#i-youtube"/></svg></a></div>
   </section>
   <section class="about" id="sobre" aria-labelledby="about-title">
@@ -75,7 +76,7 @@
      <div><dt>Laterais</dt><dd>Transição baixa e suave</dd></div>
      <div><dt>Topo</dt><dd>Comprimento a combinar</dd></div>
      <div><dt>Acabamento</dt><dd>Contornos bem definidos</dd></div>
-    </dl><a class="cut-link" href="#contato" aria-label="Conversar sobre o corte Degradê baixo">Quero esse corte <svg><use href="#i-arrow"/></svg></a></div>
+    </dl><a class="cut-link" href="#agendar" data-booking-cut="Degradê baixo" aria-label="Agendar o corte Degradê baixo">Quero esse corte <svg><use href="#i-arrow"/></svg></a></div>
    </article>
    <article class="cut-card" aria-labelledby="cut-degrade-medio">
     <figure class="cut-photo" aria-label="Espaço reservado para foto do corte Degradê médio">
@@ -87,7 +88,7 @@
      <div><dt>Laterais</dt><dd>Degradê na altura média</dd></div>
      <div><dt>Topo</dt><dd>Curto ou texturizado</dd></div>
      <div><dt>Acabamento</dt><dd>Conexão com a barba</dd></div>
-    </dl><a class="cut-link" href="#contato" aria-label="Conversar sobre o corte Degradê médio">Quero esse corte <svg><use href="#i-arrow"/></svg></a></div>
+    </dl><a class="cut-link" href="#agendar" data-booking-cut="Degradê médio" aria-label="Agendar o corte Degradê médio">Quero esse corte <svg><use href="#i-arrow"/></svg></a></div>
    </article>
    <article class="cut-card" aria-labelledby="cut-americano">
     <figure class="cut-photo" aria-label="Espaço reservado para foto do corte Americano">
@@ -99,7 +100,7 @@
      <div><dt>Laterais</dt><dd>Máquina e transição marcada</dd></div>
      <div><dt>Topo</dt><dd>Volume bem desenhado</dd></div>
      <div><dt>Acabamento</dt><dd>Frente e contornos alinhados</dd></div>
-    </dl><a class="cut-link" href="#contato" aria-label="Conversar sobre o corte Americano">Quero esse corte <svg><use href="#i-arrow"/></svg></a></div>
+    </dl><a class="cut-link" href="#agendar" data-booking-cut="Americano" aria-label="Agendar o corte Americano">Quero esse corte <svg><use href="#i-arrow"/></svg></a></div>
    </article>
    <article class="cut-card" aria-labelledby="cut-social-classico">
     <figure class="cut-photo" aria-label="Espaço reservado para foto do corte Social clássico">
@@ -111,7 +112,7 @@
      <div><dt>Laterais</dt><dd>Ajustadas, sem excessos</dd></div>
      <div><dt>Topo</dt><dd>Caimento lateral ou natural</dd></div>
      <div><dt>Acabamento</dt><dd>Discreto e bem conectado</dd></div>
-    </dl><a class="cut-link" href="#contato" aria-label="Conversar sobre o corte Social clássico">Quero esse corte <svg><use href="#i-arrow"/></svg></a></div>
+    </dl><a class="cut-link" href="#agendar" data-booking-cut="Social clássico" aria-label="Agendar o corte Social clássico">Quero esse corte <svg><use href="#i-arrow"/></svg></a></div>
    </article>
    <article class="cut-card" aria-labelledby="cut-na-tesoura">
     <figure class="cut-photo" aria-label="Espaço reservado para foto do corte Na tesoura">
@@ -123,7 +124,7 @@
      <div><dt>Laterais</dt><dd>Comprimento mais natural</dd></div>
      <div><dt>Topo</dt><dd>Textura e movimento</dd></div>
      <div><dt>Acabamento</dt><dd>Leve, sem linhas marcadas</dd></div>
-    </dl><a class="cut-link" href="#contato" aria-label="Conversar sobre o corte Na tesoura">Quero esse corte <svg><use href="#i-arrow"/></svg></a></div>
+    </dl><a class="cut-link" href="#agendar" data-booking-cut="Na tesoura" aria-label="Agendar o corte Na tesoura">Quero esse corte <svg><use href="#i-arrow"/></svg></a></div>
    </article>
    <article class="cut-card" aria-labelledby="cut-raspado-alinhado">
     <figure class="cut-photo" aria-label="Espaço reservado para foto do corte Raspado alinhado">
@@ -135,14 +136,34 @@
      <div><dt>Laterais</dt><dd>Máquina mais rente</dd></div>
      <div><dt>Topo</dt><dd>Altura curta e uniforme</dd></div>
      <div><dt>Acabamento</dt><dd>Contorno desenhado</dd></div>
-    </dl><a class="cut-link" href="#contato" aria-label="Conversar sobre o corte Raspado alinhado">Quero esse corte <svg><use href="#i-arrow"/></svg></a></div>
+    </dl><a class="cut-link" href="#agendar" data-booking-cut="Raspado alinhado" aria-label="Agendar o corte Raspado alinhado">Quero esse corte <svg><use href="#i-arrow"/></svg></a></div>
    </article>
   </div>
   <div class="cuts-note"><svg aria-hidden="true"><use href="#i-scissors"/></svg><p>Tem outra referência? Traga uma foto. A gente conversa sobre o que funciona para o seu cabelo.</p><a href="#contato">Fale com a gente <svg><use href="#i-arrow"/></svg></a></div>
  </div>
 </section>
+<section class="booking" id="agendar" aria-labelledby="booking-title" data-whatsapp="">
+ <!-- Integração opcional: preencha data-whatsapp com o número real da barbearia (DDI + DDD + número). Não use o telefone fictício da demonstração. -->
+ <div class="container booking-layout">
+  <div class="booking-copy"><p class="eyebrow">AGENDAMENTO</p><h2 id="booking-title">Vamos marcar<br>seu próximo corte?</h2><p>Escolha o serviço, o dia e o horário que você prefere. A confirmação é feita pela barbearia, depois de conferir a agenda.</p>
+   <div class="booking-info"><div><svg aria-hidden="true"><use href="#i-pin"/></svg><p><strong>Nos encontre na Augusta.</strong><span>Rua Augusta, 1500<br>São Paulo, SP</span></p></div><div><svg aria-hidden="true"><use href="#i-scissors"/></svg><p><strong>Traga sua referência.</strong><span>Pode ser uma foto, o nome de um corte ou só uma ideia. A gente conversa na cadeira.</span></p></div></div>
+   <a class="booking-phone" href="tel:+5511999999999"><svg aria-hidden="true"><use href="#i-phone"/></svg>Prefere ligar? (11) 99999-9999</a>
+  </div>
+  <form class="booking-form" id="booking-form">
+   <div class="booking-form-heading"><span class="eyebrow">SEU PRÓXIMO HORÁRIO</span><p>Como podemos cuidar do seu visual?</p></div>
+   <div class="booking-fields"><div class="booking-field"><label for="booking-service">Serviço</label><select id="booking-service" name="servico" required><option value="corte">Corte de cabelo · 30 min</option><option value="barba">Barba · 30 min</option><option value="corte-barba">Corte + barba · 60 min</option><option value="barboterapia">Barboterapia · 45 min</option><option value="estilizacao">Estilização · 30 min</option><option value="tratamento">Tratamento capilar · 45 min</option></select></div><div class="booking-field"><label for="booking-date">Dia desejado</label><input id="booking-date" name="data" type="date" required aria-describedby="booking-date-help"><small id="booking-date-help">Datas e horários de São Paulo.</small></div></div>
+   <fieldset class="booking-period"><legend>Qual período funciona melhor?</legend><div class="booking-period-options"><label><input type="radio" name="periodo" value="manha" checked><span>Manhã</span></label><label><input type="radio" name="periodo" value="tarde"><span>Tarde</span></label><label><input type="radio" name="periodo" value="noite"><span>Noite</span></label></div></fieldset>
+   <fieldset class="booking-time-field"><legend>Horário preferido</legend><p class="booking-time-help">Opções para solicitar, sujeitas à confirmação da agenda.</p><div class="booking-times" id="booking-times"></div><p class="booking-empty" id="booking-empty" role="status" hidden>Não há horários para esse período. Tente outro período ou outra data.</p></fieldset>
+   <div class="booking-fields"><div class="booking-field"><label for="booking-name">Seu nome</label><input id="booking-name" name="nome" type="text" autocomplete="name" minlength="2" maxlength="80" placeholder="Como podemos te chamar?" required></div><div class="booking-field"><label for="booking-phone">WhatsApp ou telefone</label><input id="booking-phone" name="telefone" type="tel" inputmode="tel" autocomplete="tel" maxlength="20" placeholder="(11) 99999-9999" required></div></div>
+   <div class="booking-field booking-notes"><label for="booking-notes">Alguma referência ou observação? <span>(opcional)</span></label><textarea id="booking-notes" name="observacoes" rows="2" maxlength="400" placeholder="Ex.: degradê baixo, mantendo o comprimento em cima."></textarea></div>
+   <p class="booking-error" id="booking-error" role="alert" hidden></p><button class="button button-red booking-submit" type="submit">PREPARAR SOLICITAÇÃO <svg aria-hidden="true"><use href="#i-arrow"/></svg></button><p class="booking-disclaimer">Escolher um horário não confirma uma reserva. Seus dados não são enviados nem armazenados ao preparar o pedido.</p>
+   <noscript><p class="booking-error">Ative o JavaScript para escolher os horários ou entre em contato pelo telefone informado.</p></noscript>
+   <section class="booking-result" id="booking-result" aria-labelledby="booking-result-title" hidden><p class="eyebrow">PEDIDO PREPARADO</p><h3 id="booking-result-title" tabindex="-1">Seu pedido está pronto.</h3><p id="booking-result-help">Ainda não foi enviado. Copie a solicitação e envie à barbearia pelo canal de contato de sua preferência. Aguarde a confirmação.</p><label class="sr-only" for="booking-draft">Texto da solicitação de agendamento</label><textarea id="booking-draft" readonly rows="8"></textarea><div class="booking-result-actions"><button class="button button-gold" id="booking-copy" type="button">COPIAR PEDIDO</button><a class="button button-red" id="booking-whatsapp" target="_blank" rel="noopener noreferrer" hidden>ENVIAR PELO WHATSAPP</a></div><p id="booking-copy-status" class="booking-copy-status" role="status"></p></section>
+  </form>
+ </div>
+</section>
 </main>
-<footer class="footer" id="contato"><div class="footer-main container"><div class="footer-brand"><a class="brand" href="#inicio"><span class="brand-mark" aria-hidden="true"></span><span>SEU LOGO</span></a><p>Cabelo, barba e uma boa conversa.<br>Rua Augusta, São Paulo.</p></div><address class="contact-details"><a href="tel:+5511999999999"><svg><use href="#i-phone"/></svg>(11) 99999-9999</a><a href="mailto:contato@suabarbearia.com.br"><svg><use href="#i-mail"/></svg>contato@suabarbearia.com.br</a><p><svg><use href="#i-pin"/></svg>Rua Augusta, 1500 — São Paulo, SP</p></address><div class="newsletter"><h3>Novidades da barbearia.</h3><p>Deixe seu e-mail para acompanhar.</p><form id="newsletter-form"><label class="sr-only" for="newsletter-email">Seu e-mail</label><input type="email" id="newsletter-email" name="email" placeholder="Seu melhor e-mail" autocomplete="email" required><button type="submit" class="button button-red">INSCREVER</button></form><p class="form-status" id="newsletter-status" role="status"></p></div><div class="footer-social social" aria-label="Redes sociais"><a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X"><svg><use href="#i-twitter"/></svg></a><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg><use href="#i-instagram"/></svg></a><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg><use href="#i-youtube"/></svg></a></div></div><div class="footer-bottom container"><p>© <span id="year">2026</span> Seu Logo. Todos os direitos reservados.</p><nav aria-label="Navegação do rodapé"><a href="#inicio">Início</a><a href="#sobre">Sobre</a><a href="#servicos">Serviços</a><a href="#cortes">Cortes</a><a href="#contato">Contato</a></nav></div></footer>
+<footer class="footer" id="contato"><div class="footer-main container"><div class="footer-brand"><a class="brand" href="#inicio"><span class="brand-mark" aria-hidden="true"></span><span>SEU LOGO</span></a><p>Cabelo, barba e uma boa conversa.<br>Rua Augusta, São Paulo.</p></div><address class="contact-details"><a href="tel:+5511999999999"><svg><use href="#i-phone"/></svg>(11) 99999-9999</a><a href="mailto:contato@suabarbearia.com.br"><svg><use href="#i-mail"/></svg>contato@suabarbearia.com.br</a><p><svg><use href="#i-pin"/></svg>Rua Augusta, 1500 — São Paulo, SP</p></address><div class="newsletter"><h3>Novidades da barbearia.</h3><p>Deixe seu e-mail para acompanhar.</p><form id="newsletter-form"><label class="sr-only" for="newsletter-email">Seu e-mail</label><input type="email" id="newsletter-email" name="email" placeholder="Seu melhor e-mail" autocomplete="email" required><button type="submit" class="button button-red">INSCREVER</button></form><p class="form-status" id="newsletter-status" role="status"></p></div><div class="footer-social social" aria-label="Redes sociais"><a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X"><svg><use href="#i-twitter"/></svg></a><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg><use href="#i-instagram"/></svg></a><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg><use href="#i-youtube"/></svg></a></div></div><div class="footer-bottom container"><p>© <span id="year">2026</span> Seu Logo. Todos os direitos reservados.</p><nav aria-label="Navegação do rodapé"><a href="#inicio">Início</a><a href="#sobre">Sobre</a><a href="#servicos">Serviços</a><a href="#cortes">Cortes</a><a href="#agendar">Agendar</a><a href="#contato">Contato</a></nav><button class="motion-toggle" id="motion-toggle" data-motion-toggle type="button" aria-pressed="true">Animações</button></div></footer>
 <dialog id="content-dialog" class="content-dialog"><button class="dialog-close" aria-label="Fechar janela">×</button><div id="dialog-body"></div></dialog>
 <dialog id="search-dialog" class="content-dialog search-dialog"><button class="dialog-close" aria-label="Fechar busca">×</button><p class="eyebrow">ENCONTRE O QUE PRECISA</p><h2>BUSCAR NO SITE</h2><label class="sr-only" for="site-search">Buscar serviços, estilos ou contato</label><input id="site-search" type="search" placeholder="Corte, barba, horários..." autocomplete="off"><ul id="search-results"></ul><p class="search-empty" hidden>Nenhum resultado. Tente “barba” ou “contato”.</p></dialog>
 </body>

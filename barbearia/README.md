@@ -37,7 +37,7 @@ Paleta de tinta preta, verde profundo, vinho, tabaco, latão e papel quente. Tí
 
 Animações implementadas em código próprio a partir dos padrões apresentados nos catálogos https://naocodei.com/free-code-css/ e https://naocodei.com/free-code/: fade-in, subir e aparecer, cascata, cortina, sublinhado, flutuação, brilho no botão, revelação por palavras, inclinação e janela que nasce do elemento acionado.
 
-O conteúdo continua visível sem JavaScript. Preferência por movimento reduzido desativa entradas, inclinação, levitação e transições; alterações dessa preferência durante a navegação também são respeitadas. A rolagem permanece nativa, e as entradas acontecem apenas uma vez. Elementos focados pelo teclado são revelados imediatamente. A levitação pausa quando o hero sai da tela.
+O conteúdo continua visível sem JavaScript. Preferência por movimento reduzido desativa entradas, inclinação, levitação e transições; alterações dessa preferência durante a navegação também são respeitadas. A rolagem permanece nativa, e as entradas podem se repetir ao revisitar as seções. Elementos focados pelo teclado são revelados imediatamente. A levitação pausa quando o hero sai da tela.
 
 
 ## Vitrine de cortes
@@ -45,3 +45,12 @@ O conteúdo continua visível sem JavaScript. Preferência por movimento reduzid
 A antiga galeria de três imagens foi substituída por uma vitrine de seis cortes em `#cortes`, mantendo o endereço `#estilos` como atalho compatível. A seção segue as fontes, cores e animações da página e tem seis espaços reservados sem imagens nem requisições quebradas. Cada corte mostra nome, descrição, laterais, topo, acabamento e link para o contato.
 
 A grade usa três colunas no desktop, duas no tablet e uma no celular. Os cartões entram em cascata respeitando movimento reduzido. As fotos podem ser inseridas depois seguindo `assets/cortes/LEIA-ME.md`; cada bloco do HTML já contém o elemento img de exemplo em um comentário.
+
+## Agendamento e animações no desktop
+
+- `booking.js`: datas em America/Sao_Paulo, opções de horário em intervalos de 30 minutos, duração do serviço e limite de 60 dias. O horário escolhido é uma preferência, não uma disponibilidade confirmada. Aos domingos e sábados, o fim do expediente é respeitado. Para o dia atual, há antecedência mínima de 15 minutos.
+- O formulário prepara uma solicitação copiável. Não cria reserva, não bloqueia horários e não armazena os dados pessoais.
+- Para encaminhar pelo WhatsApp, preencha `data-whatsapp` na seção `#agendar` com o número **real** no formato DDI + DDD + número. O número fictício da demonstração é rejeitado. O envio acontece somente quando o visitante clica no link de WhatsApp, após revisar o pedido.
+- A máquina mantém a levitação e as entradas agora usam Web Animations API, com dois quadros de preparação e compatibilidade por transição CSS. Entradas voltam a acontecer ao revisitar as seções.
+- O controle “Ativar animações / Reduzir animações” no menu e no rodapé permite uma escolha explícita, salva apenas como preferência visual no navegador. A preferência do sistema é respeitada inicialmente. Mudanças de preferência reativam o mecanismo corretamente; retornos pelo histórico também o reinicializam.
+- Os arquivos CSS e JS recebem um identificador de versão para evitar que o navegador combine estilos e scripts antigos.
